@@ -5,18 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="media/images/icon.png" type="image/gif" />
+        <script
+            src="https://kit.fontawesome.com/e577b103f1.js"
+            crossorigin="anonymous"
+        ></script>
         <title>Projektarbete Grupp-1</title>
     </head>
     <body>
         <!-- HOME-SECTION -->
         <section id="home-section">
             <div class="home-text-container">
-                <h1>Photo & Photo</h1>
-                <h2>Photographers</h2>
+                <h1>Photo & Photograph</h1>
+                <h2>Three Photographers</h2>
                 <nav>
                     <a href="#about-section">About us</a>
-                    <a href="#portfolio-section">Portfolio</a>
-                    <a href="#about-section">Contact</a>
+                    <a href="#gallery-section">Gallery</a>
+                    <a href="#contact-section">Contact</a>
                 </nav>
                 <h3>P & P</h3>
             </div>
@@ -45,7 +50,7 @@
                             elit. Dolorem officia cupiditate mollitia nihil
                             aliquam laborum?
                         </p>
-                        <a href="#">Read More</a>
+                        <a onclick="chrisModal()">Read More</a>
                     </div>
                     <img
                         src="media/images/photographer-male.jpg"
@@ -63,18 +68,266 @@
                         <a href="#">Read More</a>
                     </div>
                     <img
-                        src="media/images/photographer-female-2.png"
+                        src="media/images/photographer-female.png"
                         alt="Female Photographer"
                     />
                 </div>
+                <div class="card">
+                    <div class="female">
+                        <h2>Mia Photoson</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem officia cupiditate mollitia nihil
+                            aliquam laborum?
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <img
+                        src="media/images/photographer-female-2.jpg"
+                        alt="Male Photographer"
+                    />
+                </div>
             </div>
-            <img
-                class="parallax-image"
-                src="media/images/city/parallax-picture.jpg"
-                alt="Streetphoto"
-            />
         </section>
-        <section id="portfolio-section"></section>
+
+        <!-- GALLERY SECTION  -->
+        <section id="gallery-section">
+            <figure class="gallery-item gallery-item-1">
+                <img
+                    src="media/images/city/neon-sign.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-2">
+                <img
+                    src="media/images/city/neon-sign-3.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-3">
+                <img
+                    src="media/images/city/neon-street.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+
+            <figure class="gallery-item gallery-item-4">
+                <img
+                    src="media/images/city/cab-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-5">
+                <img
+                    src="media/images/city/bike-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-6">
+                <img
+                    src="media/images/city/shop-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-7">
+                <img
+                    src="media/images/city/umbrella.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-8">
+                <img
+                    src="media/images/city/alleyway.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-9">
+                <img
+                    src="media/images/city/hongkong.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-10">
+                <img
+                    src="media/images/city/skyscraper.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-11">
+                <img
+                    src="media/images/city/portrait.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-12">
+                <img
+                    src="media/images/city/door.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-13">
+                <img
+                    src="media/images/city/cone.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact-section">
+            <h1 style="font-size: 5rem">CONTACT</h1>
+        </section>
+
+        <!-- MODALS -->
+
+        <!-- CHRIS -->
+        <div id="chris-modal">
+            <!-- CHRIS - "READ MORE" -->
+            <a onclick="exitModal()" class="exit-icon"
+                ><i class="fas fa-times"></i
+            ></a>
+            <a onclick="chrisBack()" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+            <a onclick="" class="right-icon"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a onclick="" class="left-icon"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <div class="chris-modal-read-more">
+                <div class="chris-modal-image">
+                    <img
+                        class="chris-modal-image-1"
+                        src="media/images/photographer-male.jpg"
+                        alt="Chris Photosson"
+                    />
+                </div>
+                <div class="chris-modal-text">
+                    <h1>Chris Photosson</h1>
+                    <h2>Street Photographer</h2>
+                    <span class="chris-modal-text-info">
+                        <h3>When did I start?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nostrum optio quisquam pariatur error.
+                            Facilis, imos officiis.
+                        </p>
+                    </span>
+                    <span class="chris-modal-text-info">
+                        <h3>What do I prefer to shoot?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Dolores nisi sapiente qui labore similique
+                            maiores molestias? Mollitia illum in ab ex accusamus
+                            quisquam?
+                        </p>
+                    </span>
+                    <span class="chris-modal-text-info">
+                        <h3>What do I do on my spare time?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Saepe possimus placeat corporis neque
+                            explicabo quae aspernatur odit.
+                        </p>
+                    </span>
+                    <span class="chris-modal-text-button">
+                        <a onclick="chrisPortfolio()">Portfolio</a>
+                        <a onclick="chrisContact()">Contact</a>
+                    </span>
+                </div>
+            </div>
+            <!-- CHRIS - "CONTACT" -->
+            <div class="chris-contact">
+                <div class="chris-contact-text">
+                    <h1>
+                        Contact <br />
+                        Me
+                        <hr />
+                    </h1>
+                    <div class="chris-contact-icons">
+                        <a href="https://facebook.com/"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="chris-contact-mail">
+                    <form onsubmit="onSubmit()">
+                        <input type="email" placeholder="Email" required />
+                        <input type="text" placeholder="Subject" required />
+                        <textarea
+                            placeholder="Write your message here!"
+                            required
+                        ></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CHRIS "PORTFOLIO" -->
+            <div class="chris-portfolio">
+                <figure class="chris-portfolio-item chris-portfolio-item-1">
+                    <img
+                        src="media/images/city/neon-sign.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-2">
+                    <img
+                        src="media/images/city/neon-sign-3.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-3">
+                    <img
+                        src="media/images/city/neon-street.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+
+                <figure class="chris-portfolio-item chris-portfolio-item-4">
+                    <img
+                        src="media/images/city/cab-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-5">
+                    <img
+                        src="media/images/city/bike-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-6">
+                    <img
+                        src="media/images/city/shop-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-7">
+                    <img
+                        src="media/images/city/umbrella.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+            </div>
+        </div>
+
         <script src="script/script.js"></script>
     </body>
 </html>
