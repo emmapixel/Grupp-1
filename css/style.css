@@ -293,7 +293,11 @@
     height: 100vh;
     background-color: rgba(25, 25, 25, 0.4);
     position: absolute;
+<<<<<<< HEAD
     top: 100%;
+=======
+    top: 200%;
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
     left: 0;
     display: none;
 }
@@ -422,15 +426,225 @@
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+<<<<<<< HEAD
 .chris-contact-text {
     width: 100%;
+=======
+/* PORTFOLIO SECTION */
+#gallery-section {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 10px;
+    padding: 45px 15px;
+}
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery-item-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 9;
+}
+.gallery-item-3 {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery-item-5 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery-item-6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.gallery-item-7 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+/*CONTACT SECTION*/
+#contact-section {
+    width: 100%;
+    height: 40vh;
+    background: red;
+}
+
+/*MODALS*/
+
+/* CHRIS - READ MORE */
+#chris-modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(25, 25, 25, 0.4);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.chris-modal-read-more {
+    width: 70%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.chris-modal-image {
+    width: 50%;
+    height: auto;
+}
+.chris-modal-image i {
+    position: absolute;
+    top: 50%;
+    right: 51%;
+    font-size: 3rem;
+    color: white;
+    transition: 0.3s;
+}
+.chris-modal-image i:hover {
+    transform: scale(1.1);
+}
+.chris-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+.chris-modal-image-1 {
+    display: block;
+}
+.chris-modal-image-2 {
+    display: none;
+}
+.chris-modal-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 60px;
+}
+.chris-modal-text h1 {
+    font-size: 5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.chris-modal-text h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: -10px 80px 20px 0;
+}
+.chris-modal-text-info {
+    margin-top: 20px;
+}
+.chris-modal-text-info h3 {
+    font-size: 1.7rem;
+}
+.chris-modal-text-info p {
+    font-size: 1.3rem;
+    line-height: 20px;
+    margin-left: 15px;
+}
+.chris-modal-text-button {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    padding: 0 10px;
+}
+.chris-modal-text-button a {
+    position: relative;
+    color: black;
+    background: #fd6c0f;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.chris-modal-text-button a:hover {
+    transform: scale(1.1);
+}
+.exit-icon i {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 6rem;
+}
+
+/* CHRIS - CONTACT */
+.chris-contact {
+    display: none;
+    width: 35%;
+    height: 70vh;
+    background-color: white;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.back-icon i {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 6rem;
+}
+.chris-contact-text {
+    width: 100%;
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
     height: 40%;
     display: flex;
     flex-direction: row;
 }
 .chris-contact-text h1 {
+<<<<<<< HEAD
     font-size: 4.5rem;
     padding: 5% 10%;
+=======
+    font-size: 5rem;
+    padding: 5% 10%;
+    color: #fd6c0f;
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
 }
 .chris-contact-text hr {
     background-color: #fd6c0f;
@@ -442,7 +656,11 @@
 .chris-contact-icons {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     padding-top: 10px;
+=======
+    padding-top: 25px;
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
 }
 .chris-contact-icons a {
     font-size: 5.5rem;
@@ -450,15 +668,22 @@
     padding: 3.5% 10%;
     text-decoration: none;
     color: black;
+<<<<<<< HEAD
     transition: 0.3s;
 }
 .chris-contact-icons a:hover {
     color: #fd6c0f;
+=======
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
 }
 .chris-contact-mail {
     margin-bottom: 200px;
 }
 .chris-contact-mail form {
+<<<<<<< HEAD
+=======
+    background-color: whitesmoke;
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
     display: flex;
     justify-content: center;
     align-items: center;
@@ -475,6 +700,12 @@
     border: 2px solid #acacac;
     font-size: 15px;
 }
+<<<<<<< HEAD
+=======
+.chris-contact-mail form textarea {
+    height: 150px;
+}
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
 .chris-contact-mail form input:focus,
 .chris-contact-mail form textarea:focus {
     outline: none;
@@ -495,6 +726,10 @@
 }
 .chris-contact-mail form button:hover {
     background-color: #fd6c0f;
+<<<<<<< HEAD
+=======
+    transform: scale(1.1);
+>>>>>>> 3eeefd38d234dc1f46420f2abefe24c3509c641b
     color: white;
 }
 
