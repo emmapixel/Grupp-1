@@ -27,7 +27,8 @@
 }
 .home-text-container h2 {
   font-weight: 400;
-  padding-right: 90px;
+  margin-left: 15px;
+  font-style: italic;
 }
 .home-text-container nav {
   display: flex;
@@ -49,7 +50,7 @@
 }
 .home-text-container h3 {
   font-family: "Indie Flower", cursive;
-
+  font-size: 4rem;
   font-weight: 300;
   transform: rotate(-15deg);
   margin-top: 100px;
@@ -187,6 +188,7 @@
   grid-template-rows: repeat(8, 5vw);
   grid-gap: 10px;
   padding: 15px;
+  margin-bottom: 20px;
 }
 .gallery-image {
   width: 100%;

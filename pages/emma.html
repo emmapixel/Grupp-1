@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../script/emma.js"></script>
+    <link rel="stylesheet" href="../css/emma.css">
+    <script src="../script/emma.js"></script>
+</head>
+<body>
+    <!-- START-MAIN -->
+<div class="main">
+    <h1>Mia Photoson</h1>
+    <h2>Portfolio</h2>
+
+    <!--Here is the START of the Gallery Grid-->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <div class="gallery-content">
+          <img src="../media/images/lightning.jpg" alt="A picture of lightning" style="width:100%" 
+          onclick="openModal();currentSlide(1)">
+          <h3>My Work</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <div class="gallery-column">
+        <div class="gallery-content">
+          <img src="../media/images/vulcano.jpg" alt="A picture of vulcano" style="width:100%"
+          onclick="openModal();currentSlide(2)">
+          <h3>My Work</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+    </div>
+    <!--Here is the END of the Gallery Grid-->
+
+    <!--Here is the START of the Modal-->
+    <div id="modal-container" class="modal">
+      <div class="modal-content">
+        <button class="x-button" onclick="closeModal()">X</button>
+        <!--<button id="heart-button" onclick="triggerSound()"></button>-->
+        <div class="modal-image"> 
+          <img src="../media/images/lightning.jpg" alt="lightning-picture">
+        </div>
+        <div class="modal-image"> 
+          <img src="../media/images/vulcano.jpg" alt="vulcano-picture">
+        </div>
+        <div class="modal-thumbnails-wrapper">
+          <div class="modal-thumbnails">
+            <img src="../media/images/lightning.jpg">
+          </div>
+          <div class="modal-thumbnails">
+            <img src="../media/images/vulcano.jpg">
+          </div>
+        </div>
+
+        <!--Next Slide-->
+        <a class="next" onclick="plusSlide()">&#10095</a>
+        <!--Previous Slide-->
+        <a class="previous" onclick="minusSlide()">&#10094</a>
+      </div>
+    </div>
+    <!--Here is the END of the Modal-->
+    
+
+    <!--End-Main-->
+    </div>
+</body>
+</html>
