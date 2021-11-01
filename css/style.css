@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,12 +23,12 @@
     align-items: center;
 }
 .home-text-container h1 {
-    font-size: 3.8rem;
+    font-size: 38px;
     font-weight: 700;
     margin-left: 15px;
 }
 .home-text-container h2 {
-    font-size: 2.3rem;
+    font-size: 23px;
     font-weight: 400;
     padding-right: 90px;
 }
@@ -40,7 +40,7 @@
 }
 .home-text-container a {
     display: flex;
-    font-size: 3.3rem;
+    font-size: 33px;
     text-decoration: none;
     color: black;
     margin-top: 20px;
@@ -52,7 +52,7 @@
 }
 .home-text-container h3 {
     font-family: "Indie Flower", cursive;
-    font-size: 8rem;
+    font-size: 80px;
     font-weight: 300;
     transform: rotate(-15deg);
     margin-top: 100px;
@@ -126,13 +126,13 @@
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 #about-section h2 {
-    font-size: 2.7rem;
+    font-size: 27px;
     padding-bottom: 15px;
     color: black;
     text-align: center;
 }
 #about-section p {
-    font-size: 1.5rem;
+    font-size: 15px;
     line-height: 1.2;
     padding-bottom: 15px;
     text-align: center;
@@ -148,7 +148,7 @@
     margin-left: 65px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 20px;
     transition: 0.3s;
     cursor: pointer;
     border-radius: 5px;
@@ -157,7 +157,7 @@
     transform: scale(1.05);
 }
 .about-text-container h1 {
-    font-size: 6.5rem;
+    font-size: 65px;
     font-weight: 700;
     font-variant: small-caps;
     margin-top: 50px;
@@ -287,7 +287,7 @@ footer {
     align-items: center;
     background-color: white;
     color: black;
-    font-size: 4rem;
+    font-weight: 500;
   }
   footer span {
     display: flex;
@@ -312,7 +312,7 @@ footer {
   /* Style all font awesome icons */
   .fa {
     padding: 20px;
-    font-size: 2rem;
+    font-size: 20px;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -422,15 +422,16 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: 20px;
     padding: 20px 60px;
 }
 .modal-text h1 {
-    font-size: 4rem;
+    font-size: 40px;
     margin-top: 20px;
     text-align: center;
 }
 .modal-text h2 {
-    font-size: 2rem;
+    font-size: 20px;
     text-align: center;
     margin: -10px 60px 20px 0;
 }
@@ -438,10 +439,10 @@ footer {
     margin-top: 10px;
 }
 .modal-text-info h3 {
-    font-size: 1.7rem;
+    font-size: 17px;
 }
 .modal-text-info p {
-    font-size: 1.3rem;
+    font-size: 13px;
     line-height: 20px;
     margin-left: 15px;
 }
@@ -460,7 +461,7 @@ footer {
     margin-top: 10px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 20px;
     transition: 0.3s;
     cursor: pointer;
     border-radius: 5px;
@@ -474,7 +475,7 @@ footer {
     right: 2%;
     z-index: 3;
     cursor: pointer;
-    font-size: 6rem;
+    font-size: 60px;
 }
 .back-icon {
     display: none;
@@ -485,25 +486,25 @@ footer {
     left: 2%;
     z-index: 3;
     cursor: pointer;
-    font-size: 5.5rem;
+    font-size: 55px;
 }
 .right-icon {
     position: absolute;
-    top: 43%;
+    top: 46%;
     right: 10%;
     z-index: 3;
     color: white;
     cursor: pointer;
-    font-size: 7rem;
+    font-size: 50px;
 }
 .left-icon {
     position: absolute;
-    top: 43%;
+    top: 46%;
     left: 10%;
     color: white;
     z-index: 3;
     cursor: pointer;
-    font-size: 7rem;
+    font-size: 50px;
 }
 /* MODAL - CONTACT */
 .modal-contact {
@@ -527,7 +528,7 @@ footer {
     flex-direction: row;
 }
 .modal-contact-text h1 {
-    font-size: 4.5rem;
+    font-size: 45px;
     padding: 5% 10%;
 }
 .modal-contact-header {
@@ -550,8 +551,9 @@ footer {
     height: 50%;
 }
 .modal-contact-icons a {
-    font-size: 5.5rem;
+    font-size: 40px;
     margin-right: 10px;
+    margin-top: 20px;
     padding: 3.5% 10%;
     text-decoration: none;
     color: black;
@@ -615,20 +617,20 @@ footer {
     z-index: 3;
 }
 .contact-modal-submit i{
-    font-size: 11rem;
+    font-size: 110px;
     color: white;
     display: flex;
     justify-content: center;
     margin: 30px 0 0 0;
 }
 .contact-modal-submit h1{
-    font-size: 3rem;
+    font-size: 30px;
     color: white;
     text-align: center;
     margin-top: 10px;
 }
 .contact-modal-submit h2 {
-    font-size: 1.25rem;
+    font-size: 12.5px;
     color: white;
     text-align: center;
     margin-top: 5px;

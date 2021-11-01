@@ -48,8 +48,8 @@ function Modal() {
     if(persons[i].fName === "Chris"){
     chrisImage.style.display = "flex";
     chrisInfo.style.display = "block"
-    chrisInfo.innerHTML = `<span style="font-size: 70px;"><b>${persons[0].fName} ${persons[0].lName}</b></span>
-    <span style="font-size: 40px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
+    chrisInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span>
+    <span style="font-size: 25px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
     <span style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
     Something I enjoy: As you maybe can figure out by looking in my portfolio, I really enjoy a good looking ${persons[0].likes}. <br><br>
     Things I rather avoids: Im a latenight person and the majority of my photographs are taken in the night, therefor I avoid ${persons[0].dislikes} as much as I can.</span>`
@@ -68,8 +68,8 @@ function Modal() {
     if(persons[i].fName === "Mary"){
     maryImage.style.display = "flex";
     maryInfo.style.display = "block" 
-    maryInfo.innerHTML = `<span style="font-size: 70px;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
-   <span style="font-size: 40px; margin-left: 30px;"> <b>${persons[1].type}</b></span><br><br><br> 
+    maryInfo.innerHTML = `<span style="font-size: 40px; text-align: center;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
+   <span style="font-size: 25px; margin-left: 30px;"> <b>${persons[1].type}</b></span><br><br><br> 
     <span style="font-size: 15px;">My age:</b> Im ${persons[1].age} years old. <br><br>
     What do I prefer to do on my freetime? I love being out in the nature, so taking ${persons[1].likes} is something I like to make time for. <br><br>
     What can drive me crazy? Im a meticulous person, and use to say Im allergic to ${persons[1].dislikes}.</span>`
@@ -88,8 +88,8 @@ function Modal() {
       if(persons[i].fName === "Mia"){
         miaImage.style.display = "flex";
         miaInfo.style.display = "block"
-        miaInfo.innerHTML = `<span style="font-size: 70px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
-        <span style="font-size: 40px; margin-left: 30px;"><b>${persons[2].type}</b></span><br><br><br> 
+        miaInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
+        <span style="font-size: 25px; margin-left: 30px;"><b>${persons[2].type}</b></span><br><br><br> 
         <span style="font-size: 15px;">My age: Im ${persons[2].age} years old. <br><br>
         Do I have any hobbies? I love ${persons[2].likes} in the local lakes around here. <br><br>
         What would I like to live without? I love to swim in cold water, but I can't stand the cold ${persons[2].dislikes}.</span>`
