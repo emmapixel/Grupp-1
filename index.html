@@ -1,363 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="media/images/icon.png" type="image/gif" />
-    <!-- icon library for the icons in the footerb-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/e577b103f1.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Projektarbete Grupp-1</title>
-  </head>
-  <body>
-    <!-- HOME-SECTION -->
-    <section id="home-section">
-      <div class="home-text-container">
-        <h1>Photo & Photograph</h1>
-        <h2>Three Photographers</h2>
-        <nav>
-          <a href="#about-section">About us</a>
-          <a href="#gallery-section">Gallery</a>
-          <a href="#contact-section">Contact</a>
-        </nav>
-        <h3>P & P</h3>
-      </div>
-      <div class="home-photo-container">
-        <span class="home-photo-1"
-          ><img
-            src="media/images/city/neon-sign-2.jpg"
-            alt="Image of neon sign"
-        /></span>
-        <span class="home-photo-2"
-          ><img
-            src="media/images/city/girl-glasses.jpg"
-            alt="Image of girl with glasses"
-        /></span>
-      </div>
-    </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="media/images/icon.png" type="image/gif" />
+        <script
+            src="https://kit.fontawesome.com/e577b103f1.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Projektarbete Grupp-1</title>
+    </head>
+    <body>
+        <!-- HOME-SECTION -->
+        <section id="home-section">
+            <div class="home-text-container">
+                <h1>Photo & Photograph</h1>
+                <h2>Three Photographers</h2>
+                <nav>
+                    <a href="#about-section">About us</a>
+                    <a href="#gallery-section">Gallery</a>
+                    <a href="#contact-section">Contact</a>
+                </nav>
+                <h3>P & P</h3>
+            </div>
+            <div class="home-photo-container">
+                <span class="home-photo-1"
+                    ><img
+                        src="media/images/city/neon-sign-2.jpg"
+                        alt="Image of neon sign"
+                /></span>
+                <span class="home-photo-2"
+                    ><img
+                        src="media/images/city/girl-glasses.jpg"
+                        alt="Image of girl with glasses"
+                /></span>
+            </div>
+        </section>
 
-    <!-- ABOUT-SECTION -->
-    <section id="about-section">
-      <div class="card-container">
-        <div class="card">
-          <div class="male">
-            <h2>Chris Photoson</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              officia cupiditate mollitia nihil aliquam laborum?
-            </p>
-            <a onclick="chrisModal()">Read More</a>
-          </div>
-          <img
-            src="media/images/photographer-male.jpg"
-            alt="Male Photographer"
-          />
-        </div>
-        <div class="card">
-          <div class="female">
-            <h2>Mary Photoson</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              officia cupiditate mollitia nihil aliquam laborum?
-            </p>
-            <a href="#">Read More</a>
-          </div>
-          <img
-            src="media/images/photographer-female.png"
-            alt="Female Photographer"
-          />
-        </div>
-        <div class="card">
-          <div class="female">
-            <h2>Mia Photoson</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              officia cupiditate mollitia nihil aliquam laborum?
-            </p>
-            <a href="#">Read More</a>
-          </div>
-          <img
-            src="media/images/photographer-female-2.jpg"
-            alt="Male Photographer"
-          />
-        </div>
-      </div>
-    </section>
+        <!-- ABOUT-SECTION -->
+        <section id="about-section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="male">
+                        <h2>Chris Photoson</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem officia cupiditate mollitia nihil
+                            aliquam laborum?
+                        </p>
+                        <a onclick="chrisP()">Read More</a>
+                    </div>
+                    <img
+                        src="media/images/photographer-male.jpg"
+                        alt="Male Photographer"
+                    />
+                </div>
+                <div class="card">
+                    <div class="female">
+                        <h2>Mary Photoson</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem officia cupiditate mollitia nihil
+                            aliquam laborum?
+                        </p>
+                        <a onclick="maryP()">Read More</a>
+                    </div>
+                    <img
+                        src="media/images/photographer-female.png"
+                        alt="Female Photographer"
+                    />
+                </div>
+                <div class="card">
+                    <div class="female">
+                        <h2>Mia Photoson</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem officia cupiditate mollitia nihil
+                            aliquam laborum?
+                        </p>
+                        <a onclick="miaP()">Read More</a>
+                    </div>
+                    <img
+                        src="media/images/photographer-female-2.jpg"
+                        alt="Male Photographer"
+                    />
+                </div>
+            </div>
+        </section>
 
-    <!-- GALLERY SECTION  -->
-    <section id="gallery-section">
-      <figure class="gallery-item gallery-item-1">
-        <img
-          src="media/images/city/neon-sign.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-2">
-        <img
-          src="media/images/city/neon-sign-3.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-3">
-        <img
-          src="media/images/city/neon-street.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
+        <!-- GALLERY SECTION  -->
+        <section id="gallery-section">
+            <figure class="gallery-item gallery-item-1">
+                <img
+                    src="media/images/city/neon-sign.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-2">
+                <img
+                    src="media/images/city/neon-sign-3.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-3">
+                <img
+                    src="media/images/city/neon-street.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
 
-      <figure class="gallery-item gallery-item-4">
-        <img
-          src="media/images/city/cab-city.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-5">
-        <img
-          src="media/images/city/bike-city.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-6">
-        <img
-          src="media/images/city/shop-city.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-7">
-        <img
-          src="media/images/city/umbrella.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-8">
-        <img
-          src="media/images/city/alleyway.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-9">
-        <img
-          src="media/images/city/hongkong.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-10">
-        <img
-          src="media/images/city/skyscraper.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-11">
-        <img
-          src="media/images/city/portrait.jpg"
-          alt=""
-          class="gallery-image"
-        />
-      </figure>
-      <figure class="gallery-item gallery-item-12">
-        <img src="media/images/city/door.jpg" alt="" class="gallery-image" />
-      </figure>
-      <figure class="gallery-item gallery-item-13">
-        <img src="media/images/city/cone.jpg" alt="" class="gallery-image" />
-      </figure>
-    </section>
+            <figure class="gallery-item gallery-item-4">
+                <img
+                    src="media/images/city/cab-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-5">
+                <img
+                    src="media/images/city/bike-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-6">
+                <img
+                    src="media/images/city/shop-city.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-7">
+                <img
+                    src="media/images/city/umbrella.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-8">
+                <img
+                    src="media/images/city/alleyway.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-9">
+                <img
+                    src="media/images/city/hongkong.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-10">
+                <img
+                    src="media/images/city/skyscraper.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-11">
+                <img
+                    src="media/images/city/portrait.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-12">
+                <img
+                    src="media/images/city/door.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+            <figure class="gallery-item gallery-item-13">
+                <img
+                    src="media/images/city/cone.jpg"
+                    alt=""
+                    class="gallery-image"
+                />
+            </figure>
+        </section>
 
-  
+        <!-- CONTACT SECTION -->
+        <!-- A google map for customers to find us or our store -->
+        <iframe
+            id="contact-section"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.924737182274!2d11.953063015849308!3d57.70074848111892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff321ab4e87cf%3A0xd856154bc8e87514!2sJENSEN%20yrkesh%C3%B6gskola%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1632945649858!5m2!1ssv!2sse"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+        ></iframe>
+        <footer>
+            <div class="socials-container">
+              <h3>Follow us</h3>
+              <a href="#" class="fa fa-facebook facebook"></a>
+              <a href="#" class="fa fa-twitter twitter"></a>
+              <a href="#" class="fa fa-instagram instagram"></a>
+              <a href="#" class="fa fa-pinterest pinterest"></a>
+            </div>
+            <div class="adress-footer">
+              <p>
+               <h3>Visit us</h3><span>Pusterviksgatan 3</span><span>413 01 Göteborg</span
+                ><span>Sweden</span>
+              </p>
+            </div>
+            <div class="tel-footer">
+              <p>
+              <h3>Contact us</h3><span>947693470</span><span>lorem@gmail.com</span>
+              </p>
+            </div>
+            <div class="open-footer">
+              <p>
+               <h3>Business hours</h3><span>Mon-Fri 11:00-18:00</span>
+                <span>Sat-Sun</span><span>Closed</span>
+              </p>
+            </div>
+          </footer>
 
-    <!-- MODALS -->
+        <!-- MODALS -->
 
-    <!-- CHRIS -->
-    <div id="chris-modal">
-      <!-- CHRIS - "READ MORE" -->
-      <a onclick="exitModal()" class="exit-icon"
-        ><i class="fas fa-times"></i
-      ></a>
-      <a onclick="chrisBack()" class="back-icon"
-        ><i class="fas fa-arrow-left"></i
-      ></a>
-      <a onclick="" class="right-icon"
-        ><i class="fas fa-arrow-alt-circle-right"></i
-      ></a>
-      <a onclick="" class="left-icon"
-        ><i class="fas fa-arrow-alt-circle-left"></i
-      ></a>
-      <div class="chris-modal-read-more">
-        <div class="chris-modal-image">
-          <img
-            class="chris-modal-image-1"
-            src="media/images/photographer-male.jpg"
-            alt="Chris Photosson"
-          />
-        </div>
-        <div class="chris-modal-text">
-          <h1>Chris Photosson</h1>
-          <h2>Street Photographer</h2>
-          <span class="chris-modal-text-info">
-            <h3>When did I start?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              optio quisquam pariatur error. Facilis, imos officiis.
-            </p>
-          </span>
-          <span class="chris-modal-text-info">
-            <h3>What do I prefer to shoot?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-              nisi sapiente qui labore similique maiores molestias? Mollitia
-              illum in ab ex accusamus quisquam?
-            </p>
-          </span>
-          <span class="chris-modal-text-info">
-            <h3>What do I do on my spare time?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              possimus placeat corporis neque explicabo quae aspernatur odit.
-            </p>
-          </span>
-          <span class="chris-modal-text-button">
-            <a onclick="chrisPortfolio()">Portfolio</a>
-            <a onclick="chrisContact()">Contact</a>
-          </span>
-        </div>
-      </div>
-      <!-- CHRIS - "CONTACT" -->
-      <div class="chris-contact">
-        <div class="chris-contact-text">
-          <h1>
-            Contact <br />
-            Me
-            <hr />
-          </h1>
-          <div class="chris-contact-icons">
-            <a href="https://facebook.com/"
-              ><i class="fab fa-facebook-f"></i
+        <!-- CHRIS -->
+        <div id="modal">
+            <!-- CHRIS - "READ MORE" -->
+            <a onclick="exitModal()" class="exit-icon"
+                ><i class="fas fa-times"></i
             ></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-          </div>
+            <a onclick="modalBack()" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+            <a onclick="modalRightClick()" class="right-icon"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a onclick="modalLeftClick()" class="left-icon"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <div class="modal-read-more">
+                <div class="modal-image">
+                    <img
+                        class="chris-modal-image-1"
+                        src="media/images/photographer-male.jpg"
+                        alt="Chris Photosson"
+                    />
+                    <img 
+                        class="mary-modal-image" 
+                        src="media/images/photographer-female.png" 
+                        alt="Mary Photosson"
+                    />
+                    <img class="mia-modal-image" 
+                        src="media/images/photographer-female-2.jpg" 
+                        alt="Mia Photosson">
+                </div>
+                <div class="modal-text">
+                    <div class="chris-modal-info"></div>
+                    <div class="mary-modal-info"></div>
+                    <div class="mia-modal-info"></div>
+                    <div class="modal-text-button">
+                        <a onclick="chrisPortfolio()">Portfolio</a>
+                        <a onclick="modalContact()">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL - "CONTACT" -->
+            <div class="modal-contact">
+                <div class="modal-contact-text">
+                    <div class="modal-contact-header"><h1 class="modal-contact-header-h1"></h1><hr class="modal-contact-header-hr"></hr></div>
+                    <div class="modal-contact-icons">
+                        <a href="https://facebook.com/"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="modal-contact-mail">
+                    <form onsubmit="onSubmit(); return false;">
+                        <input id="email-input" type="email" placeholder="Email" required />
+                        <input type="text" placeholder="Subject" required />
+                        <textarea
+                            placeholder="Write your message here!"
+                            required
+                        ></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-modal-submit">
+                <!-- <i class="far fa-envelope"></i> -->
+                <i class="far fa-paper-plane"></i>
+                <h1>THANK YOU!</h1>
+                <h2>I will respond to you as fast as I can.</h2>
+            </div>
+
+            <!-- MODAL - "PORTFOLIO" -->
+            <!-- CHRIS PORTFOLIO -->
+            <div class="chris-portfolio">
+                <figure class="chris-portfolio-item chris-portfolio-item-1">
+                    <img
+                        src="media/images/city/neon-sign.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-2">
+                    <img
+                        src="media/images/city/neon-sign-3.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-3">
+                    <img
+                        src="media/images/city/neon-street.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+
+                <figure class="chris-portfolio-item chris-portfolio-item-4">
+                    <img
+                        src="media/images/city/cab-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-5">
+                    <img
+                        src="media/images/city/bike-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-6">
+                    <img
+                        src="media/images/city/shop-city.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-7">
+                    <img
+                        src="media/images/city/umbrella.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                    />
+                </figure>
+            </div>
+            <!-- MARY PORTFOLIO -->
+            <div class="mary-portfolio"><h1>hej</h1></div>
+            <!-- MIA PORTFOLIO -->
+            <div class="mia-portfolio"><h1>Hej</h1></div>
         </div>
-        <div class="chris-contact-mail">
-          <form onsubmit="onSubmit()">
-            <input type="email" placeholder="Email" required />
-            <input type="text" placeholder="Subject" required />
-            <textarea
-              placeholder="Write your message here!"
-              required
-            ></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- CHRIS "PORTFOLIO" -->
-      <div class="chris-portfolio">
-        <figure class="chris-portfolio-item chris-portfolio-item-1">
-          <img
-            src="media/images/city/neon-sign.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-        <figure class="chris-portfolio-item chris-portfolio-item-2">
-          <img
-            src="media/images/city/neon-sign-3.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-        <figure class="chris-portfolio-item chris-portfolio-item-3">
-          <img
-            src="media/images/city/neon-street.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-
-        <figure class="chris-portfolio-item chris-portfolio-item-4">
-          <img
-            src="media/images/city/cab-city.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-        <figure class="chris-portfolio-item chris-portfolio-item-5">
-          <img
-            src="media/images/city/bike-city.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-        <figure class="chris-portfolio-item chris-portfolio-item-6">
-          <img
-            src="media/images/city/shop-city.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-        <figure class="chris-portfolio-item chris-portfolio-item-7">
-          <img
-            src="media/images/city/umbrella.jpg"
-            alt=""
-            class="chris-portfolio-image"
-          />
-        </figure>
-      </div>
-    </div>
-    <!-- A google map for customers to find us or our store -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.924737182274!2d11.953063015849308!3d57.70074848111892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff321ab4e87cf%3A0xd856154bc8e87514!2sJENSEN%20yrkesh%C3%B6gskola%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1632945649858!5m2!1ssv!2sse"
-      width="100%"
-      height="300"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
-    <!-- Footer with some information about the company -->
-    <footer>
-      <div class="socials-container">
-        <h3>Follow us</h3>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-pinterest"></a>
-      </div>
-      <div class="adress-footer">
-        <p>
-         <h3>Visit us</h3><span>Pusterviksgatan 3</span><span>413 01 Göteborg</span
-          ><span>Sweden</span>
-        </p>
-      </div>
-      <div class="tel-footer">
-        <p>
-        <h3>Contact us</h3><span>947693470</span><span>lorem@gmail.com</span>
-        </p>
-      </div>
-      <div class="open-footer">
-        <p>
-         <h3>Business hours</h3>Mon-Fri 11:00-18:00
-          <span>Sat-Sun</span><span>Closed</span>
-        </p>
-      </div>
-    </footer>
-
-    <script src="script/script.js"></script>
-  </body>
+ 
+        <script src="script/script.js"></script>
+    </body>
 </html>
