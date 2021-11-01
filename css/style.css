@@ -641,6 +641,20 @@ footer h3 {
 }
 
 @media only screen and (max-width: 768px) {
+  #home-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  #about-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   footer {
     width: 100%;
     height: auto;
