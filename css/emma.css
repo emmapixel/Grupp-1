@@ -15,6 +15,26 @@
     color: pink;
     font-style: italic;
   }
+
+  /*Business-card-section*/
+  .business-card{
+    width: 50%;
+    background-color: crimson;
+  }
+
+  .profile-picture{
+    width: 25%;
+  }
+
+  .profile-picture{
+    width: 25%;
+    object-fit: fill;
+    display: block;
+  }
+
+  .profile-text{
+    width: 25%;
+  }
   
   .gallery-column{
     float: left;
@@ -137,4 +157,5 @@
       width: 100%;
     }
   }
+
 
