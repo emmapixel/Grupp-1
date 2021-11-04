@@ -41,76 +41,80 @@ const persons = [
 /*---------------*/
 
 /*MAIN MODAL*/
-function Modal() { //Opens up the "About us"-modal.
-    let visible = false;
-    if (visible === false) {
-      document.getElementById("about-section").scrollIntoView();
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
-      visible = true;
-    } else {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-      visible = false;
-    };
-};
+function Modal() {
+  //Opens up the "About us"-modal.
+  let visible = false;
+  if (visible === false) {
+    document.getElementById("about-section").scrollIntoView();
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+    visible = true;
+  } else {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+    visible = false;
+  }
+}
 /*-------------*/
 
 /*PERSON MODALS*/
-  const miaImage = document.getElementsByClassName("mia-modal-image")[0];
-  const miaInfo = document.getElementsByClassName("mia-modal-info")[0];
-  const chrisImage = document.getElementsByClassName("chris-modal-image-1")[0];
-  const chrisInfo = document.getElementsByClassName("chris-modal-info")[0];
-  const maryImage = document.getElementsByClassName("mary-modal-image")[0];
-  const maryInfo = document.getElementsByClassName("mary-modal-info")[0];
+const miaImage = document.getElementsByClassName("mia-modal-image")[0];
+const miaInfo = document.getElementsByClassName("mia-modal-info")[0];
+const chrisImage = document.getElementsByClassName("chris-modal-image-1")[0];
+const chrisInfo = document.getElementsByClassName("chris-modal-info")[0];
+const maryImage = document.getElementsByClassName("mary-modal-image")[0];
+const maryInfo = document.getElementsByClassName("mary-modal-info")[0];
 
-  /*Chris*/  
-  function chrisP(){  //Shows Chris Photossons "profile" in the "about us"-modal, and writes out his information.
-    for(let i = 0; i < persons.length; i++){
-    if(persons[i].fName === "Chris"){
-    chrisImage.style.display = "flex";
-    chrisInfo.style.display = "block"
-    chrisInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span>
+/*Chris*/
+function chrisP() {
+  //Shows Chris Photossons "profile" in the "about us"-modal, and writes out his information.
+  for (let i = 0; i < persons.length; i++) {
+    if (persons[i].fName === "Chris") {
+      chrisImage.style.display = "flex";
+      chrisInfo.style.display = "block";
+      chrisInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span>
     <span style="font-size: 25px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
     <span style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
     Something I enjoy: As you maybe can figure out by looking in my portfolio, I really enjoy a good looking ${persons[0].likes}. <br><br>
-    Things I rather avoids: Im a latenight person and the majority of my photographs are taken in the night, therefor I avoid ${persons[0].dislikes} as much as I can.</span>`
-    maryImage.style.display = "none";
-    maryInfo.style.display = "none";
-    miaImage.style.display = "none";
-    miaInfo.style.display = "none";
-    Modal();
-    };
-  };
-  };
-  
-  /*Mary*/
-  function maryP(){  //Shows Mary Photossons "profile" in the "about us"-modal, and writes out her information.
-    for(let i = 0; i < persons.length; i++){
-    if(persons[i].fName === "Mary"){
-    maryImage.style.display = "flex";
-    maryInfo.style.display = "block" 
-    maryInfo.innerHTML = `<span style="font-size: 40px; text-align: center;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
+    Things I rather avoids: Im a latenight person and the majority of my photographs are taken in the night, therefor I avoid ${persons[0].dislikes} as much as I can.</span>`;
+      maryImage.style.display = "none";
+      maryInfo.style.display = "none";
+      miaImage.style.display = "none";
+      miaInfo.style.display = "none";
+      Modal();
+    }
+  }
+}
+
+/*Mary*/
+function maryP() {
+  //Shows Mary Photossons "profile" in the "about us"-modal, and writes out her information.
+  for (let i = 0; i < persons.length; i++) {
+    if (persons[i].fName === "Mary") {
+      maryImage.style.display = "flex";
+      maryInfo.style.display = "block";
+      maryInfo.innerHTML = `<span style="font-size: 40px; text-align: center;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
    <span style="font-size: 25px; margin-left: 30px;"> <b>${persons[1].type}</b></span><br><br><br> 
     <span style="font-size: 15px;">My age:</b> Im ${persons[1].age} years old. <br><br>
     What do I prefer to do on my freetime? I love being out in the nature, so taking ${persons[1].likes} is something I like to make time for. <br><br>
-    What can drive me crazy? Im a meticulous person, and use to say Im allergic to ${persons[1].dislikes}.</span>`
-    chrisImage.style.display = "none";
-    chrisInfo.style.display = "none";
-    miaImage.style.display = "none";
-    miaInfo.style.display = "none";
-    Modal();
-    };
-  };
-  };
+    What can drive me crazy? Im a meticulous person, and use to say Im allergic to ${persons[1].dislikes}.</span>`;
+      chrisImage.style.display = "none";
+      chrisInfo.style.display = "none";
+      miaImage.style.display = "none";
+      miaInfo.style.display = "none";
+      Modal();
+    }
+  }
+}
 
-  /*Mia*/
-  function miaP(){  //Shows Mia Photossons "profile" in the "about us"-modal, and writes out her information.
-    for(let i = 0; i < persons.length; i++){
-      if(persons[i].fName === "Mia"){
-        miaImage.style.display = "flex";
-        miaInfo.style.display = "block"
-        miaInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
+/*Mia*/
+function miaP() {
+  //Shows Mia Photossons "profile" in the "about us"-modal, and writes out her information.
+  for (let i = 0; i < persons.length; i++) {
+    if (persons[i].fName === "Mia") {
+      miaImage.style.display = "flex";
+      miaInfo.style.display = "block";
+      miaInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
         <span style="font-size: 25px; margin-left: 30px;"><b>${persons[2].type}</b></span><br><br><br> 
         <span style="font-size: 15px;">My age: Im ${persons[2].age} years old. <br><br>
         Do I have any hobbies? I love ${persons[2].likes} in the local lakes around here. <br><br>
@@ -126,7 +130,8 @@ function Modal() { //Opens up the "About us"-modal.
 /*--------------------*/
 
 /*MODAL BUTTONS*/
-function exitModal() {  //Closes the "about us"-modal.
+function exitModal() {
+  //Closes the "about us"-modal.
   if (modal.style.display === "block") {
     modal.style.display = "none";
     contactModal.style.display = "none";
@@ -141,7 +146,8 @@ function exitModal() {  //Closes the "about us"-modal.
   }
 }
 
-function modalBack() { //If into "contact" or "portfolio"-section, this function will take you back one step.
+function modalBack() {
+  //If into "contact" or "portfolio"-section, this function will take you back one step.
   visible = false;
   if (visible === false) {
     contactModal.style.display = "none";
@@ -160,8 +166,9 @@ function modalBack() { //If into "contact" or "portfolio"-section, this function
   }
 }
 
-function modalRightClick(){  //This function will switch between the different photographers. (chris, mary and mia)
-  if(chrisInfo.style.display === "block"){
+function modalRightClick() {
+  //This function will switch between the different photographers. (chris, mary and mia)
+  if (chrisInfo.style.display === "block") {
     contactModal.style.display = "none";
     contactBackArrow.style.display = "none";
     chrisPortfolioModal.style.display = "none";
@@ -185,8 +192,9 @@ function modalRightClick(){  //This function will switch between the different p
   }
 }
 
-function modalLeftClick(){  //This function will switch between the different photographers. (chris, mary and mia)
-  if(chrisInfo.style.display === "block"){
+function modalLeftClick() {
+  //This function will switch between the different photographers. (chris, mary and mia)
+  if (chrisInfo.style.display === "block") {
     contactModal.style.display = "none";
     chrisPortfolioModal.style.display = "none";
     maryPortfolioModal.style.display = "none";
@@ -211,7 +219,8 @@ function modalLeftClick(){  //This function will switch between the different ph
 /*MODAL -  PORTFOLIO AND CONTACT*/
 
 /* MODAL - PORTFOLIO */
-function modalPortfolio() {  //This function will show the portfolio of the different photographers depenting on which modal you're into.
+function modalPortfolio() {
+  //This function will show the portfolio of the different photographers depenting on which modal you're into.
   let visible = false;
   if (visible === false) {
     contactBackArrow.style.display = "block";
@@ -233,15 +242,15 @@ function modalPortfolio() {  //This function will show the portfolio of the diff
 /*------------------*/
 /* CHRIS - PORTFOLIO */
 const images = [
-  {name: "bulbs.jpg"},
-  {name: "snowsign.jpg"},
-  {name: "sign.jpg"},
-  {name: "street.jpg"},
-  {name: "basin.jpg"},
-  {name: "umbrellas.jpg"},
-  {name: "carousel.jpg"},
-  {name: "cone.jpg"},
-  {name: "door.jpg"}
+  { name: "bulbs.jpg" },
+  { name: "snowsign.jpg" },
+  { name: "sign.jpg" },
+  { name: "street.jpg" },
+  { name: "basin.jpg" },
+  { name: "umbrellas.jpg" },
+  { name: "carousel.jpg" },
+  { name: "cone.jpg" },
+  { name: "door.jpg" },
 ];
 
 const chrisPortfolio = document.getElementsByClassName("chris-portfolio")[0];
@@ -252,66 +261,78 @@ const thumbnailsWrapper = document.getElementById("thumbnails-wrapper");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
 
-function setMainImage(src){  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
-  galleryModal.style.display = "flex"
-  chrisPortfolio.style.filter = "blur(5px)"
+function setMainImage(src) {
+  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
+  galleryModal.style.display = "flex";
+  chrisPortfolio.style.filter = "blur(5px)";
   mainImage.setAttribute("src", src);
   setActiveThumbnail();
-};
-
-function setActiveThumbnail(){  //This function will make a red border and scale up the thumbnail of the picture that shows as "main image".
-  for(let i = 0; i < thumbnails.length; i++){
-      if(thumbnails[i].src === mainImage.src){
-          thumbnails[i].style.border = "2px solid red"
-          thumbnails[i].style.transform = "scale(1.25)"
-          thumbnails[i].style.boxShadow = "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
-          
-      }else{
-          thumbnails[i].style.border = "none"
-          thumbnails[i].style.transform = "none"
-      };
-  };
-};
-
-function exitGalleryModal(){  //Will exit the portfolio modal.
-  galleryModal.style.display = "none"
-  chrisPortfolio.style.filter = "none"
 }
 
-function prevImage(){ //Will change "main image" to the previous in the thumbnail list.
-  for(let i = 0; i < thumbnails.length; i++){
-      if(thumbnails[i].src === mainImage.src && i !== 0){
-          mainImage.setAttribute("src", thumbnails[i -= 1].src)
-          thumbnailsWrapper.scrollLeft -= 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
-          setActiveThumbnail();
-      };
-  };
-};
+function setActiveThumbnail() {
+  //This function will make a red border and scale up the thumbnail of the picture that shows as "main image".
+  for (let i = 0; i < thumbnails.length; i++) {
+    if (thumbnails[i].src === mainImage.src) {
+      thumbnails[i].style.border = "2px solid red";
+      thumbnails[i].style.transform = "scale(1.25)";
+      thumbnails[i].style.boxShadow =
+        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)";
+    } else {
+      thumbnails[i].style.border = "none";
+      thumbnails[i].style.transform = "none";
+    }
+  }
+}
 
-function nextImage(){ //Will change "main image" to the next in the thumbnail list.
-  for(let i = 0; i < thumbnails.length; i++){
-      if(thumbnails[i].src === mainImage.src && i !== 14){
-          mainImage.setAttribute("src", thumbnails[i += 1].src)
-          thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
-          setActiveThumbnail();
-      };
-  };
-};
+function exitGalleryModal() {
+  //Will exit the portfolio modal.
+  galleryModal.style.display = "none";
+  chrisPortfolio.style.filter = "none";
+}
 
-window.addEventListener("load", function(){  //Loads the images before it shows on your screen.
+function prevImage() {
+  //Will change "main image" to the previous in the thumbnail list.
+  for (let i = 0; i < thumbnails.length; i++) {
+    if (thumbnails[i].src === mainImage.src && i !== 0) {
+      mainImage.setAttribute("src", thumbnails[(i -= 1)].src);
+      thumbnailsWrapper.scrollLeft -= 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
+      setActiveThumbnail();
+    }
+  }
+}
+
+function nextImage() {
+  //Will change "main image" to the next in the thumbnail list.
+  for (let i = 0; i < thumbnails.length; i++) {
+    if (thumbnails[i].src === mainImage.src && i !== 14) {
+      mainImage.setAttribute("src", thumbnails[(i += 1)].src);
+      thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
+      setActiveThumbnail();
+    }
+  }
+}
+
+window.addEventListener("load", function () {
+  //Loads the images before it shows on your screen.
   mainImage.setAttribute("src", `/media/images/chris/${images[0].name}`);
-  thumbnailsWrapper.innerHTML = images.map((img) => 
-  `<img src="/media/images/chris/${img.name}" class="thumbnail" onclick="setMainImage(this.src)">`)
-  .join("");
-  setActiveThumbnail()
+  thumbnailsWrapper.innerHTML = images
+    .map(
+      (img) =>
+        `<img src="/media/images/chris/${img.name}" class="thumbnail" onclick="setMainImage(this.src)">`
+    )
+    .join("");
+  setActiveThumbnail();
 
   prevButton.addEventListener("click", prevImage);
-  nextButton.addEventListener("click", nextImage);  
+  nextButton.addEventListener("click", nextImage);
 });
 /*-------------------*/
 /* MODAL - CONTACT */
-function modalContact() {  //Will open the "contact" section in the modal.
-  const contactH1 = document.getElementsByClassName("modal-contact-header-h1")[0];
+function modalContact() {
+  //Will open the "contact" section in the modal.
+  const contactH1 = document.getElementsByClassName(
+    "modal-contact-header-h1"
+  )[0];
   let visible = false;
   if (visible === false) {
     contactBackArrow.style.display = "block";
@@ -333,7 +354,8 @@ function modalContact() {  //Will open the "contact" section in the modal.
   }
 }
 
-function onSubmit(){  //When submiting your form, a message will show up for three seconds and you will go back to the "main modal".
+function onSubmit() {
+  //When submiting your form, a message will show up for three seconds and you will go back to the "main modal".
   const popUpModal = document.getElementsByClassName("contact-modal-submit")[0];
   const emailInput = document.getElementById("email-input");
 
@@ -344,20 +366,86 @@ function onSubmit(){  //When submiting your form, a message will show up for thr
       popUpModal.style.display = "none";
     }, 3000);
     //AFTER 3SEC GO BACK TO "START"-MODAL
-  
-}else{
-  popUpModal.style.display = "none";
-}
-/*---------------------*/
-/*-----MODAL ENDS---- */
+  } else {
+    popUpModal.style.display = "none";
+  }
+  /*---------------------*/
+  /*-----MODAL ENDS---- */
 
-/* Marys portfolio */
-const openLightboxMary = () => {
+  /* Marys portfolio: Ghazals kod */
+}
+
+/* openLightboxMary is a function used for opening the modal when a pic i cklicked on. 
+First i started with looping through all pictures that had the same class "mary pic", and added a eventListener
+so that when any pic is cklickd on the lightbox will show up displayed as a flex */
+
+const alladivvar = document.querySelectorAll(".mary-pic");
+alladivvar.forEach((data) =>
+  data.addEventListener("click", () => {
+    document.getElementById("marys-lightbox-wrapper").style.display = "flex";
+  })
+);
+
+/* const openLightboxMary = () => {
   const marysPictures = document.getElementsByClassName("mary-pic");
   for (let i = 0; i < marysPictures.length; i++) {
-    marysPictures[i].addEventListener("klick", () => {
+    marysPictures[i].addEventListener("click", () => {
       document.getElementById("marys-lightbox-wrapper").style.display = "flex";
     });
   }
+  window.addEventListener("load", openLightboxMary);
+};*/
+
+/*The function closeMarysLightbox is used for closing the lightbox when clicked on a span in HTML
+When the span (X) is clicked the lightbox will not be displayed */
+const closeMarysLightbox = () => {
+  document.getElementById("marys-lightbox-wrapper").style.display = "none";
 };
-window.addEventListener("load", openLightboxMary()); }
+/* The code below is so that the function openLightboxMary is called when the page has loaded */
+
+/* This is an array with the pictures that will be displayed in the thumbnail wrapper and the main-image*/
+const marysImages = [
+  { name: "nature1.jpg" },
+  { name: "nature2.jpg" },
+  { name: "nature3.jpg" },
+  { name: "nature4.jpg" },
+  { name: "nature5.jpg" },
+  { name: "nature6.jpg" },
+];
+/* The eventlistner is added so that when the page loads the pictures will be 
+displayed as thumbnails in the thumbnail wrapper.
+First I set the main-image to the first pic in the array that has the index of [0], I use the setAttribute for
+the src and path of the picture, then with the help of a .map() I create a new array and push all the picture to 
+the thumbnail wrapper using the inneHTML. I also give the thumbnail pictures an onclickevent so that when clicked
+something will happen(see the function setMainImageMary) */
+window.addEventListener("load", () => {
+  document
+    .getElementById("main-image-mary-lightbox")
+    .setAttribute("src", `./maryspics/${marysImages[0].name}`);
+  document.getElementById("thumbnail-wrapper").innerHTML = marysImages
+    .map(
+      (img) =>
+        `<img src="./maryspics/${img.name}" class="thumbnail-mary" onclick="setMainImageMary(this.src)">`
+    )
+    .join("");
+});
+/* When clicked this function will set the  same src for the main image and the thumbnail thats is being clicked
+on. When you click a thumbnail that picture will be displayed as the main image
+  */
+const setMainImageMary = (src) => {
+  document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
+  setActiveThumbnailMary();
+};
+const setActiveThumbnailMary = () => {
+  const marysThumbs = document.getElementsByClassName("thumbnail-mary");
+  for (let s = 0; s < marysThumbs.length; s++) {
+    if (
+      marysThumbs[s].src ===
+      document.getElementById("main-image-mary-lightbox").src
+    ) {
+      marysThumbs[i].style.border = "2px solid white"
+    } else {
+      marysThumbs[i].style.border = "0px"
+    }
+  }
+};
