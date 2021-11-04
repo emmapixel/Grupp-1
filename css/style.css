@@ -637,48 +637,48 @@ footer h3 {
 
 /* CHRIS PORTFOLIO */
 .chris-portfolio {
-  width: 70%;
-  height: 70vh;
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  background-color: white;
-  display: none;
-  /* display: grid; */
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(7, 5vw);
-  grid-gap: 10px;
-  grid-row-gap: 16px;
-  z-index: 5;
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: white;
+    display: none;
+    /* display: grid; */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 6.2vw);
+    grid-gap: 7.5px;
+    z-index: 5;
 }
 .chris-portfolio-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 .chris-portfolio-item-1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
 }
 .chris-portfolio-item-3 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
 }
 .chris-portfolio-item-2 {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 7;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
 }
 .chris-portfolio-item-5 {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  grid-row-start: 4;
-  grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;
 }
 .chris-portfolio-item-7 {
   grid-column-start: 5;
@@ -693,38 +693,115 @@ footer h3 {
   grid-row-end: 3;
 }
 .chris-portfolio-item-4 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+.chris-portfolio-item-8 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.chris-portfolio-item-9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+#gallery-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(124, 124, 124, 0.5);
+    z-index: 6;
+    display: none;
+}
+.main-image-wrapper{
+    position: relative;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 65vh;
+    background-color: white;
+}
+#main-image{
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+}
+#exit-gallery-button {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+#prev-button, #next-button{
+    position: absolute;
+    top: 35%;
+    color: white;
+    padding: 0 15px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 4;
+}
+#prev-button{
+    left: 15%
+}
+#prev-button:hover{
+    margin-left: -3px;
+}
+#next-button{
+    right: 15%;
+}
+#next-button:hover{
+    margin-right: -3px;
+}
+#thumbnails-wrapper{
+    width: 80%;
+    height: 130px;
+    position: absolute;
+    bottom: 7.5%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 30px;
+}
+.thumbnail{
+    width: 120px;
+    height: 85px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 20px;
 }
 /* MARY PORTFOLIO */
 .mary-portfolio {
-  width: 70%;
-  height: 70vh;
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  background-color: white;
-  z-index: 5;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 1em;
-  grid-template-rows: auto auto;
-  justify-content: center;
-  align-items: center;
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: white;
+    display: none;
+    /* display: grid; */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 6.05vw);
+    grid-gap: 10px;
+    z-index: 5;
 }
-.mary-pic img {
-  width: 250px;
-  height: 150px;
-}
-#marys-lightbox-wrapper {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  
+#marys-lightbox-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 1000000;
 }
 
 /* MIA PORTFOLIO */
@@ -743,3 +820,13 @@ footer h3 {
   grid-row-gap: 16px;
   z-index: 5;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+}
+
+
+
