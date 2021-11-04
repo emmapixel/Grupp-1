@@ -6,7 +6,7 @@ const chrisPortfolioModal =
 const maryPortfolioModal = document.getElementsByClassName("mary-portfolio")[0];
 const miaPortfolioModal = document.getElementsByClassName("mia-portfolio")[0];
 const contactBackArrow = document.getElementsByClassName("back-icon")[0];
-const contactExitArrow = document.getElementsByClassName("exit-icon")[0];
+const contactExit = document.getElementsByClassName("exit-icon")[0];
 const contactRightArrow = document.getElementsByClassName("right-icon")[0];
 const contactLeftArrow = document.getElementsByClassName("left-icon")[0];
 const contactModal = document.getElementsByClassName("modal-contact")[0];
@@ -47,6 +47,9 @@ function Modal() { //Opens up the "About us"-modal.
       document.getElementById("about-section").scrollIntoView();
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
+      contactExit.style.display = "block"
+      contactRightArrow.style.display = "block"
+      contactLeftArrow.style.display = "block"
       visible = true;
     } else {
       modal.style.display = "none";
@@ -255,6 +258,10 @@ const nextButton = document.getElementById("next-button");
 function setMainImage(src){  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
   galleryModal.style.display = "flex"
   chrisPortfolio.style.filter = "blur(5px)"
+  contactBackArrow.style.display = "none"
+  contactRightArrow.style.display = "none"
+  contactLeftArrow.style.display = "none"
+  contactExit.style.display = "none"
   mainImage.setAttribute("src", src);
   setActiveThumbnail();
 };
@@ -276,6 +283,10 @@ function setActiveThumbnail(){  //This function will make a red border and scale
 function exitGalleryModal(){  //Will exit the portfolio modal.
   galleryModal.style.display = "none"
   chrisPortfolio.style.filter = "none"
+  contactBackArrow.style.display = "block"
+  contactRightArrow.style.display = "block"
+  contactLeftArrow.style.display = "block"
+  contactExit.style.display = "block"
 }
 
 function prevImage(){ //Will change "main image" to the previous in the thumbnail list.
@@ -290,7 +301,7 @@ function prevImage(){ //Will change "main image" to the previous in the thumbnai
 
 function nextImage(){ //Will change "main image" to the next in the thumbnail list.
   for(let i = 0; i < thumbnails.length; i++){
-      if(thumbnails[i].src === mainImage.src && i !== 14){
+      if(thumbnails[i].src === mainImage.src && i !== 9){
           mainImage.setAttribute("src", thumbnails[i += 1].src)
           thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
           setActiveThumbnail();
@@ -343,11 +354,10 @@ function onSubmit(){  //When submiting your form, a message will show up for thr
       //When pressing the "Submit" button the "Thank you" modal will be shown for 3seconds.
       popUpModal.style.display = "none";
     }, 3000);
-    //AFTER 3SEC GO BACK TO "START"-MODAL
-  
-}else{
-  popUpModal.style.display = "none";
-}
+  }else{
+    popUpModal.style.display = "none";
+  }
+};
 /*---------------------*/
 /*-----MODAL ENDS---- */
 
@@ -360,4 +370,4 @@ const openLightboxMary = () => {
     });
   }
 };
-window.addEventListener("load", openLightboxMary()); }
+window.addEventListener("load", openLightboxMary());

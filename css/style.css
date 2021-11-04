@@ -468,6 +468,9 @@ footer h3 {
 .modal-text-button a:hover {
   transform: scale(1.05);
 }
+.exit-icon {
+  display: none;
+}
 .exit-icon i {
   position: absolute;
   top: 2%;
@@ -488,6 +491,7 @@ footer h3 {
   font-size: 55px;
 }
 .right-icon {
+  display: none;
   position: absolute;
   top: 46%;
   right: 10%;
@@ -497,6 +501,7 @@ footer h3 {
   font-size: 50px;
 }
 .left-icon {
+  display: none;
   position: absolute;
   top: 46%;
   left: 10%;
