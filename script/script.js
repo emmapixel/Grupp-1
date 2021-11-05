@@ -454,4 +454,20 @@ const setActiveThumbnailMary = () => {
   }
 };
 
+function sendMessage(event){
+  const form = event.target;
+  const firstnameInput = form.elements['fname'];
+  const firstname = firstnameInput.value;
 
+  const lastnameInput = form.elements['lname'];
+  const lastname = lastnameInput.value;
+
+  const emailInput = form.elements['email'];
+  const email = emailInput.value;
+
+  const messageTextarea = form.elements['messageTextareaId'];
+  const message = messageTextarea.value;
+  console.log(firstname + " " + lastname + " " + email + " " + message);
+  event.preventDefault();
+  return false;
+}

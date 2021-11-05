@@ -125,6 +125,7 @@
   border-radius: 5px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
+
 #about-section h2 {
   font-size: 27px;
   padding-bottom: 15px;
@@ -892,5 +893,19 @@ footer h3 {
   z-index: 5;
 }
 
-@media only screen and (max-width: 600px) {
+#email-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+    background: #fd6c0f;
+}
+#email-form-container form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#submit-button{
+    width: 50px;
 }
