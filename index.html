@@ -256,7 +256,7 @@
                     <div class="mary-modal-info"></div>
                     <div class="mia-modal-info"></div>
                     <div class="modal-text-button">
-                        <a onclick="chrisPortfolio()">Portfolio</a>
+                        <a onclick="modalPortfolio()">Portfolio</a>
                         <a onclick="modalContact()">Contact</a>
                     </div>
                 </div>
@@ -297,61 +297,115 @@
             <div class="chris-portfolio">
                 <figure class="chris-portfolio-item chris-portfolio-item-1">
                     <img
-                        src="media/images/city/neon-sign.jpg"
+                        src="media/images/chris/bulbs.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
                 <figure class="chris-portfolio-item chris-portfolio-item-2">
                     <img
-                        src="media/images/city/neon-sign-3.jpg"
+                        src="media/images/chris/snowsign.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
                 <figure class="chris-portfolio-item chris-portfolio-item-3">
                     <img
-                        src="media/images/city/neon-street.jpg"
+                        src="media/images/chris/sign.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
 
                 <figure class="chris-portfolio-item chris-portfolio-item-4">
                     <img
-                        src="media/images/city/cab-city.jpg"
+                        src="media/images/chris/street.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
                 <figure class="chris-portfolio-item chris-portfolio-item-5">
                     <img
-                        src="media/images/city/bike-city.jpg"
+                        src="media/images/chris/basin.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
                 <figure class="chris-portfolio-item chris-portfolio-item-6">
                     <img
-                        src="media/images/city/shop-city.jpg"
+                        src="media/images/chris/umbrellas.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
                 <figure class="chris-portfolio-item chris-portfolio-item-7">
                     <img
-                        src="media/images/city/umbrella.jpg"
+                        src="media/images/chris/carousel.jpg"
                         alt=""
                         class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-8">
+                    <img
+                        src="media/images/city/cone.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
+                    />
+                </figure>
+                <figure class="chris-portfolio-item chris-portfolio-item-9">
+                    <img
+                        src="media/images/city/door.jpg"
+                        alt=""
+                        class="chris-portfolio-image"
+                        onclick="setMainImage(src)"
                     />
                 </figure>
             </div>
+            <div id="gallery-modal">
+                <div class="main-image-wrapper">
+                    <img src="" id="main-image">
+                </div>
+                <span id="exit-gallery-button" onclick="exitGalleryModal()"><i class="fas fa-times"></i></span>
+                <span id="prev-button"><i class="fas fa-angle-left"></i></span>
+                <span id="next-button"><i class="fas fa-angle-right"></i></span>
+                <div id="thumbnails-wrapper">
+                </div>
+            </div>
             <!-- MARY PORTFOLIO -->
-            <div class="mary-portfolio"><h1>hej</h1></div>
+            <div class="mary-portfolio">
+                <div id="marys-lightbox-wrapper">
+                    <div class="marys-picture-modal">
+                        <img id="main-image-mary-lightbox" src="" alt="">
+                        <span id="close-marys-lightbox" onclick="closeMarysLightbox()">&times;</span>
+                        <span id="prev-btn">&#10094;</span>
+                        <span id="next-btn">&#10095;</span>
+                        <div id="thumbnail-wrapper">
+                        </div>
+                    </div>
+                </div>
+                <div class="upper-row">
+                <div class="mary-pic-1"><img class="mary-pic" src="./maryspics/nature1.jpg" alt=""></div>
+                <div class="mary-pic-2"><img class="mary-pic" src="./maryspics/nature2.jpg" alt=""></div>
+                <div class="mary-pic-3"><img class="mary-pic" src="./maryspics/nature3.jpg" alt=""></div>
+                </div>
+                <div class="lower-row">
+                    <div class="mary-pic-4"><img class="mary-pic" src="./maryspics/nature4.jpg" alt=""></div>
+                    <div class="mary-pic-5"><img class="mary-pic" src="./maryspics/nature5.jpg" alt=""></div>
+                    <div class="mary-pic-6"><img class="mary-pic" src="./maryspics/nature6.jpg" alt=""></div>
+                </div>
+            </div>
             <!-- MIA PORTFOLIO -->
             <div class="mia-portfolio"><h1>Hej</h1></div>
         </div>
- 
         <script src="script/script.js"></script>
+        <script src="script/ghazal.js"></script>
     </body>
 </html>
