@@ -41,22 +41,23 @@ const persons = [
 /*---------------*/
 
 /*MAIN MODAL*/
-function Modal() { //Opens up the "About us"-modal.
-    let visible = false;
-    if (visible === false) {
-      document.getElementById("about-section").scrollIntoView();
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
-      contactExit.style.display = "block"
-      contactRightArrow.style.display = "block"
-      contactLeftArrow.style.display = "block"
-      visible = true;
-    } else {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-      visible = false;
-    };
-};
+function Modal() {
+  //Opens up the "About us"-modal.
+  let visible = false;
+  if (visible === false) {
+    document.getElementById("about-section").scrollIntoView();
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+    contactExit.style.display = "block";
+    contactRightArrow.style.display = "block";
+    contactLeftArrow.style.display = "block";
+    visible = true;
+  } else {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+    visible = false;
+  }
+}
 /*-------------*/
 
 /*PERSON MODALS*/
@@ -263,13 +264,14 @@ const thumbnailsWrapper = document.getElementById("thumbnails-wrapper");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
 
-function setMainImage(src){  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
-  galleryModal.style.display = "flex"
-  chrisPortfolio.style.filter = "blur(5px)"
-  contactBackArrow.style.display = "none"
-  contactRightArrow.style.display = "none"
-  contactLeftArrow.style.display = "none"
-  contactExit.style.display = "none"
+function setMainImage(src) {
+  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
+  galleryModal.style.display = "flex";
+  chrisPortfolio.style.filter = "blur(5px)";
+  contactBackArrow.style.display = "none";
+  contactRightArrow.style.display = "none";
+  contactLeftArrow.style.display = "none";
+  contactExit.style.display = "none";
   mainImage.setAttribute("src", src);
   setActiveThumbnail();
 }
@@ -289,13 +291,14 @@ function setActiveThumbnail() {
   }
 }
 
-function exitGalleryModal(){  //Will exit the portfolio modal.
-  galleryModal.style.display = "none"
-  chrisPortfolio.style.filter = "none"
-  contactBackArrow.style.display = "block"
-  contactRightArrow.style.display = "block"
-  contactLeftArrow.style.display = "block"
-  contactExit.style.display = "block"
+function exitGalleryModal() {
+  //Will exit the portfolio modal.
+  galleryModal.style.display = "none";
+  chrisPortfolio.style.filter = "none";
+  contactBackArrow.style.display = "block";
+  contactRightArrow.style.display = "block";
+  contactLeftArrow.style.display = "block";
+  contactExit.style.display = "block";
 }
 
 function prevImage() {
@@ -309,15 +312,16 @@ function prevImage() {
   }
 }
 
-function nextImage(){ //Will change "main image" to the next in the thumbnail list.
-  for(let i = 0; i < thumbnails.length; i++){
-      if(thumbnails[i].src === mainImage.src && i !== 9){
-          mainImage.setAttribute("src", thumbnails[i += 1].src)
-          thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
-          setActiveThumbnail();
-      };
-  };
-};
+function nextImage() {
+  //Will change "main image" to the next in the thumbnail list.
+  for (let i = 0; i < thumbnails.length; i++) {
+    if (thumbnails[i].src === mainImage.src && i !== 9) {
+      mainImage.setAttribute("src", thumbnails[(i += 1)].src);
+      thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
+      setActiveThumbnail();
+    }
+  }
+}
 
 window.addEventListener("load", function () {
   //Loads the images before it shows on your screen.
@@ -372,23 +376,12 @@ function onSubmit() {
       //When pressing the "Submit" button the "Thank you" modal will be shown for 3seconds.
       popUpModal.style.display = "none";
     }, 3000);
-  }else{
+  } else {
     popUpModal.style.display = "none";
   }
-};
+}
 /*---------------------*/
 /*-----MODAL ENDS---- */
-
-/* openLightboxMary is a function used for opening the modal when a pic i cklicked on. 
-First i started with looping through all pictures that had the same class "mary pic", and added a eventListener
-so that when any pic is cklickd on the lightbox will show up displayed as a flex */
-
-const alladivvar = document.querySelectorAll(".mary-pic");
-alladivvar.forEach((data) =>
-  data.addEventListener("click", () => {
-    document.getElementById("marys-lightbox-wrapper").style.display = "flex";
-  })
-);
 
 /* const openLightboxMary = () => {
   const marysPictures = document.getElementsByClassName("mary-pic");
@@ -408,6 +401,7 @@ const closeMarysLightbox = () => {
 /* The code below is so that the function openLightboxMary is called when the page has loaded */
 
 /* This is an array with the pictures that will be displayed in the thumbnail wrapper and the main-image*/
+
 const marysImages = [
   { name: "nature1.jpg" },
   { name: "nature2.jpg" },
@@ -421,7 +415,8 @@ displayed as thumbnails in the thumbnail wrapper.
 First I set the main-image to the first pic in the array that has the index of [0], I use the setAttribute for
 the src and path of the picture, then with the help of a .map() I create a new array and push all the picture to 
 the thumbnail wrapper using the inneHTML. I also give the thumbnail pictures an onclickevent so that when clicked
-something will happen(see the function setMainImageMary) */
+something will happen(see the function setMainImageMary)  `./maryspics/${marysImages[0].name}`*/
+
 window.addEventListener("load", () => {
   document
     .getElementById("main-image-mary-lightbox")
@@ -432,14 +427,46 @@ window.addEventListener("load", () => {
         `<img src="./maryspics/${img.name}" class="thumbnail-mary" onclick="setMainImageMary(this.src)">`
     )
     .join("");
-});
-/* When clicked this function will set the  same src for the main image and the thumbnail thats is being clicked
-on. When you click a thumbnail that picture will be displayed as the main image
-  */
-const setMainImageMary = (src) => {
-  document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
   setActiveThumbnailMary();
+  document
+    .getElementById("prev-btn-mary")
+    .addEventListener("click", prevImageMary);
+  document
+    .getElementById("next-btn-mary")
+    .addEventListener("click", nextImageMary);
+});
+
+const prevImageMary = () => {
+  const marysThumbs = document.getElementsByClassName("thumbnail-mary");
+  for (let i = 0; i < marysThumbs.length; i++) {
+    if (
+      marysThumbs[i].src ===
+        document.getElementById("main-image-mary-lightbox").src &&
+      i !== 0
+    ) {
+      document
+        .getElementById("main-image-mary-lightbox")
+        .setAttribute("src", marysThumbs[(i -= 1)].src);
+    }
+    setActiveThumbnailMary();
+  }
 };
+const nextImageMary = () => {
+  const marysThumbs = document.getElementsByClassName("thumbnail-mary");
+  for (let i = 0; i < marysThumbs.length; i++) {
+    if (
+      marysThumbs[i].src ===
+        document.getElementById("main-image-mary-lightbox").src &&
+      i !== marysThumbs.length - 1
+    ) {
+      document
+        .getElementById("main-image-mary-lightbox")
+        .setAttribute("src", marysThumbs[(i += 1)].src);
+    }
+    setActiveThumbnailMary();
+  }
+};
+
 const setActiveThumbnailMary = () => {
   const marysThumbs = document.getElementsByClassName("thumbnail-mary");
   for (let s = 0; s < marysThumbs.length; s++) {
@@ -447,11 +474,27 @@ const setActiveThumbnailMary = () => {
       marysThumbs[s].src ===
       document.getElementById("main-image-mary-lightbox").src
     ) {
-      marysThumbs[i].style.border = "2px solid white"
+      marysThumbs[s].style.border = "2px solid white";
     } else {
-      marysThumbs[i].style.border = "0px"
+      marysThumbs[s].style.border = "0px";
     }
   }
 };
+/* openLightboxMary is a function used for opening the modal when a pic i cklicked on. 
+First i started with looping through all pictures that had the same class "mary pic", and added a eventListener
+so that when any pic is cklickd on the lightbox will show up displayed as a flex */
 
+const allPictures = document.querySelectorAll(".mary-pic");
+allPictures.forEach((pic) =>
+  pic.addEventListener("click", () => {
+    document.getElementById("marys-lightbox-wrapper").style.display = "flex";
+  })
+);
 
+/* When clicked this function will set the  same src for the main image and the thumbnail thats is being clicked
+on. When you click a thumbnail that picture will be displayed as the main image
+  */
+const setMainImageMary = (src) => {
+  document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
+  setActiveThumbnailMary();
+};
