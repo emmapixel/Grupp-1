@@ -498,3 +498,32 @@ const setMainImageMary = (src) => {
   document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
   setActiveThumbnailMary();
 };
+function sendMessage(event){
+  const form = event.target;
+  const firstnameInput = form.elements['fname'];
+  const firstname = firstnameInput.value;
+
+  const lastnameInput = form.elements['lname'];
+  const lastname = lastnameInput.value;
+
+  const emailInput = form.elements['email'];
+  const email = emailInput.value;
+
+  const messageTextarea = form.elements['messageTextareaId'];
+  const message = messageTextarea.value;
+  console.log(firstname + " " + lastname + " " + email + " " + message);
+  event.preventDefault();
+  return false;
+}
+
+//email-form
+function showEmailForm(){
+  console.log("hej");
+  const emailFormContainerFlip = document.getElementById("email-form-container");
+  console.log(emailFormContainerFlip);
+  if(emailFormContainerFlip.style.display === "block"){
+    emailFormContainerFlip.style.display = "none";
+  }else{
+    emailFormContainerFlip.style.display = "block";
+  }
+}

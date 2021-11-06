@@ -5,45 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script>
     <script src="../script/emma.js"></script>
     <link rel="stylesheet" href="../css/emma.css">
     <script src="../script/emma.js"></script>
 </head>
 <body>
     <!-- START-MAIN -->
-<div class="main">
-    <h1>Mia Photoson</h1>
-    <div class="business-card">
-      <div class="profile-picture">
-        <img src="../media/images/photographer-female.png" alt="photographer-female">
+    <!--Home button-->
+    <button id="home-button"><a href="../index.html"> Home </a></button>
+
+    <div class="card-container">
+      <div id="card-image-text-wrapper">
+          <div class="card-image">
+              <img class="card-images" id="natural-disaster-picture" src="../media/images/fire.jpg" alt="Picture of fire" width="100%" height="100%">
+              <div class="card-info" id="card-info-id" onclick="openInfoModal()">
+                <i class="fa fa-info" aria-hidden="true"></i>
+              </div>
+          </div>
+            <div class="card-text">
+                <h2>Mia Photoson</h2>
+                <img src="../media/images/photographer-female-2.jpg" alt="Mia-Photographer" width="300px">
+                <p>Här kan ni läsa mer om denna fågel. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iure consequatur enim deleniti, totam omnis obcaecati 
+                    iusto nobis error quaerat accusantium temporibus 
+                    voluptatem id ratione natus suscipit. Similique quasi dolorum saepe!
+                    Här kan ni läsa mer om denna fågel. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iure consequatur enim deleniti, totam omnis obcaecati 
+                    iusto nobis error quaerat accusantium temporibus 
+                    voluptatem id ratione natus suscipit. Similique quasi dolorum saepe!
+                    Här kan ni läsa mer om denna fågel. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iure consequatur enim deleniti, totam omnis obcaecati 
+                    iusto nobis error quaerat accusantium temporibus 
+                    voluptatem id ratione natus suscipit. Similique quasi dolorum saepe!
+                    Här kan ni läsa mer om denna fågel. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iure consequatur enim deleniti, totam omnis obcaecati 
+                    iusto nobis error quaerat accusantium temporibus 
+                    voluptatem id ratione natus suscipit. Similique quasi dolorum saepe!
+                    Här kan ni läsa mer om denna fågel. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iure consequatur enim deleniti, totam omnis obcaecati 
+                    iusto nobis error quaerat accusantium temporibus 
+                    voluptatem id ratione natus suscipit. Similique quasi dolorum saepe!
+                </p>
+            </div>
+        </div>
       </div>
-      <div class="profile-text">
-        <h2>Mia Photoson</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente expedita ad dolor 
-          architecto placeat totam et repellendus quia
-           ullam, reprehenderit natus laudantium cum iusto? Voluptates quos nulla atque eum possimus?
-        </p>
+
+      <!--Here is the previous button and next button-->
+      <div class="previous-next-buttons">
+        <button onclick="previousPicture()"><i class="fa fa-chevron-left"></i> Previous </button>
+        <button onclick="nextPicture()"> Next <i class="fa fa-chevron-right"></i></button>
+        <button><a href="../index.html#contact-section"> Contact </a></button>
+        <button><a href="#gallery-titel"> Portfolio </a></button>
       </div>
-    </div>
-    <h2>Portfolio</h2>
+
+      <!--Business card modal-->
+      <div id="info-modal">
+        <div class="info-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate iste,
+                minima omnis magnam consectetur vero rerum et quis, tempora,
+                iusto enim deserunt ullam nam impedit sapiente ex ea. Quis, perferendis!
+            </p>
+        </div>
+      </div>  
 
     <!--Here is the START of the Gallery Grid-->
+    <div id="gallery-titel">
+      <h2>Portfolio</h2>
+    </div>
+
+    <!--1 picture in the gallery-->
     <div class="gallery-row">
       <div class="gallery-column">
         <div class="gallery-content">
-          <img src="../media/images/lightning.jpg" alt="A picture of lightning" style="width:100%" 
+          <img src="../media/images/tornado.jpg" alt="A picture of lightning" style="width:100%" 
           onclick="openModal();currentSlide(1)">
           <h3>My Work</h3>
           <p>Lorem ipsum..</p>
         </div>
       </div>
+
+      <!--2 picture in the gallery-->
       <div class="gallery-column">
         <div class="gallery-content">
-          <img src="../media/images/vulcano.jpg" alt="A picture of vulcano" style="width:100%"
+          <img src="../media/images/lightning.jpg" alt="A picture of vulcano" style="width:100%"
           onclick="openModal();currentSlide(2)">
           <h3>My Work</h3>
           <p>Lorem ipsum..</p>
         </div>
+      </div>
+
+        <!--3 picture in the gallery-->
+        <div class="gallery-column">
+          <div class="gallery-content">
+            <img src="../media/images/vulcano.jpg" alt="A picture of vulcano" style="width:100%"
+            onclick="openModal();currentSlide(3)">
+            <h3>My Work</h3>
+            <p>Lorem ipsum..</p>
+          </div>
+        </div>
+
+        <!--4 picture in the gallery-->
+        <div class="gallery-column">
+          <div class="gallery-content">
+            <img src="../media/images/fire.jpg" alt="A picture of vulcano" style="width:100%"
+            onclick="openModal();currentSlide(4)">
+            <h3>My Work</h3>
+            <p>Lorem ipsum..</p>
+          </div>
+        </div>
+
+        <!--5 picture in the gallery-->
+        <div class="gallery-column">
+          <div class="gallery-content">
+            <img src="../media/images/tsunami.jpg" alt="A picture of vulcano" style="width:100%"
+            onclick="openModal();currentSlide(5)">
+            <h3>My Work</h3>
+            <p>Lorem ipsum..</p>
+          </div>
+        </div>
+
+        <!--6 picture in the gallery-->
+        <div class="gallery-column">
+          <div class="gallery-content">
+            <img src="../media/images/wave.jpg" alt="A picture of vulcano" style="width:100%"
+            onclick="openModal();currentSlide(6)">
+            <h3>My Work</h3>
+            <p>Lorem ipsum..</p>
+          </div>
+        </div>
+
+        <!--Here is the caption for every picture-->
         <div class="caption-container">
           <p class="caption"></p>
         </div>
@@ -53,20 +145,47 @@
     <!--Here is the START of the Modal-->
     <div id="modal-container" class="modal">
       <div class="modal-content">
+        <button class="heart-button" onclick="triggerSound()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        <button class="heart-button-black" onclick="triggerSound()"><i class="fa fa-heart" aria-hidden="true"></i></button>
         <button class="x-button" onclick="closeModal()">X</button>
-        <!--<button id="heart-button" onclick="triggerSound()"></button>-->
         <div class="modal-image"> 
-          <img src="../media/images/lightning.jpg" alt="lightning-picture">
+          <img src="../media/images/tornado.jpg" alt="lightning-picture">
         </div>
         <div class="modal-image"> 
-          <img src="../media/images/vulcano.jpg" alt="vulcano-picture">
+          <img src="../media/images/lightning.jpg" alt="vulcano-picture">
         </div>
+        <div class="modal-image"> 
+          <img src="../media/images/vulcano.jpg" alt="lightning-picture">
+        </div>
+        <div class="modal-image"> 
+          <img src="../media/images/fire.jpg" alt="vulcano-picture">
+        </div>
+        <div class="modal-image"> 
+          <img src="../media/images/tsunami.jpg" alt="lightning-picture">
+        </div>
+        <div class="modal-image"> 
+          <img src="../media/images/wave.jpg" alt="vulcano-picture">
+        </div>
+
+        <!--THUMBNAILS-->
         <div class="modal-thumbnails-wrapper">
           <div class="modal-thumbnails">
-            <img src="../media/images/lightning.jpg">
+            <img class="thumbnail-image" src="../media/images/tornado.jpg">
           </div>
           <div class="modal-thumbnails">
-            <img src="../media/images/vulcano.jpg">
+            <img class="thumbnail-image" src="../media/images/lightning.jpg">
+          </div>
+          <div class="modal-thumbnails">
+            <img class="thumbnail-image" src="../media/images/vulcano.jpg">
+          </div>
+          <div class="modal-thumbnails">
+            <img class="thumbnail-image" src="../media/images/fire.jpg">
+          </div>
+          <div class="modal-thumbnails">
+            <img class="thumbnail-image" src="../media/images/tsunami.jpg">
+          </div>
+          <div class="modal-thumbnails">
+            <img class="thumbnail-image" src="../media/images/wave.jpg">
           </div>
         </div>
 
@@ -74,12 +193,8 @@
         <a class="next" onclick="plusSlide()">&#10095</a>
         <!--Previous Slide-->
         <a class="previous" onclick="minusSlide()">&#10094</a>
+
       </div>
-
-    
-    <!--Here is the END of the gallary-->
-
-    <!--End-Main-->
     </div>
 </body>
 </html>
