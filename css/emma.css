@@ -10,19 +10,12 @@ body {
 }
 
 /*Start of the main-content of the site*/
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
 #home-button{
   margin-left: 10px;
   margin-top: 10px;
-}
-
-.link-buttons{
-  margin-right: 30px;
-  margin-top: 10px;
+  border-radius: 25% 25%;
+  padding: 10px;
+  font-size: 15px;
 }
 
 h1 {
@@ -32,7 +25,32 @@ h1 {
   font-style: italic;
 }
 
-  /*Business-card-section*/
+a{
+  text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  color: orange;
+}
+
+/* visited link */
+a:visited {
+  color: red;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+  /*Card-container*/
   .card-container{
     position: relative;
     width: 70%;
@@ -41,6 +59,7 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
+  /*This is a wrapper around the text and the images on the card*/
   #card-image-text-wrapper{
     width: 100%;
     height: 100%;
@@ -87,7 +106,7 @@ h1 {
     font-family:'Courier New', Courier, monospace;
   }
 
-/*Start of the business card modal*/
+/*Start of the card-container info modal*/
 #info-modal{
   display: none;
   z-index: 20;
@@ -106,12 +125,28 @@ h1 {
 }
 
 .previous-next-buttons{
-  margin-left: 190px;
-  margin-top: 10px;
+  width: 50%;
 }
 
 .previous-next-buttons button{
-  font-size: 15px;
+  border-radius: 25% 25%;
+  padding: 5px;
+}
+
+.contact-portfolio-buttons{
+  width: 50%;
+  text-align: end;
+}
+
+.contact-portfolio-buttons button{
+  border-radius: 25% 25%;
+  padding: 5px;
+}
+
+.button-wrapper{
+  margin-top: 10px;
+  display: flex;
+  width: 70%;
 }
 
 /*Start of the gallery-content*/
@@ -153,9 +188,8 @@ h1 {
 .gallery-content p {
   margin: 5px 0px;
 }
-/*End of the gallery-content*/
 
-/*Start of modal*/
+/*Start of the gallery modal*/
 .modal {
   display: none;
   position: fixed;
@@ -164,6 +198,7 @@ h1 {
   top: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0,0,0,0.9);
 }
 
 .modal-content {
@@ -173,11 +208,6 @@ h1 {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.modal-image {
-  display: none;
-  justify-content: center;
 }
 
 .modal-image img {

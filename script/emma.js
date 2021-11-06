@@ -1,20 +1,14 @@
-function openModal(){
-  alert("hej");
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-image").style.display = "block";
-  document.getElementById("modal").style.backgroundColor = "black";
-}
-
+//Our openInfoModal() targets info-modal id and change the style attribute to block instead of none.
 function openInfoModal(){
   document.getElementById("info-modal").style.display = "block";
-  document.getElementById("card-info-id").style.display = "none";
 }
 
+//Our closeInfoModal() function targets the info-modal and sets the style display to none. So the modal disappears.
 function closeInfoModal(){
   document.getElementById("info-modal").style.display = "none";
-  document.getElementById("card-info-id").style.display = "block";
 }
 
+//
 window.onclick = function(event){
   const modal = document.getElementById("info-modal");
   const target = event.target;
@@ -23,6 +17,8 @@ window.onclick = function(event){
   }
 }
 
+//Here we declare a constant array that holds our pictures and the search address.
+//
 const naturalDisasterPictures = [
   "../media/images/fire.jpg", 
   "../media/images/floods.jpg", 
@@ -53,13 +49,13 @@ function previousPicture(){
   document.getElementById("natural-disaster-picture").src = naturalDisasterPicture;
 }
 
-//Function for opening the Modal
+//function to open the modal. At first the moda-containerl has display none as default. 
+//Our openModal() targets our modal-container id and change the syle attribute to display block.
 function openModal(){
     document.getElementById("modal-container").style.display = "block";
-    document.getElementById("modal-container").style.backgroundColor = "rgba(0,0,0,0.9)";
 }
 
-//Function for closing the Modal
+//Function for closing the modal-container and change style display to none.
 function closeModal(){
     document.getElementById("modal-container").style.display = "none";
 }
@@ -95,13 +91,5 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "flex";
     thumbnails[slideIndex-1].className += " active";
-    /*
-    captionText.innerHTML = thumbnails[slideIndex-1].alt;???????*/
   }
-
-//Function for trigger sound when you press heart-button
-
-//function triggerSound(){
-//    document.getElementById("heart-button").innerHTML;
-//}
 

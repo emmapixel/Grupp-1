@@ -239,7 +239,7 @@ function modalPortfolio() {
   } else if (maryImage.style.display === "flex") {
     maryPortfolioModal.style.display = "grid";
   } else {
-    miaPortfolioModal.style.display = "grid";
+    document.location = "../pages/emma.html";
   }
 }
 /*------------------*/
