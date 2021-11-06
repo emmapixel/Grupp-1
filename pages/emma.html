@@ -12,6 +12,9 @@
 </head>
 <body>
     <!-- START-MAIN -->
+    <!--Home button-->
+    <button id="home-button"><a href="../index.html"> Home </a></button>
+
     <div class="card-container">
       <div id="card-image-text-wrapper">
           <div class="card-image">
@@ -47,11 +50,15 @@
             </div>
         </div>
       </div>
+
       <!--Here is the previous button and next button-->
       <div class="previous-next-buttons">
-        <button onclick="previousPicture()"><i class="fa fa-chevron-left"></i>Previous</button>
+        <button onclick="previousPicture()"><i class="fa fa-chevron-left"></i> Previous </button>
         <button onclick="nextPicture()"> Next <i class="fa fa-chevron-right"></i></button>
+        <button><a href="../index.html#contact-section"> Contact </a></button>
+        <button><a href="#gallery-titel"> Portfolio </a></button>
       </div>
+
       <!--Business card modal-->
       <div id="info-modal">
         <div class="info-content">
@@ -61,10 +68,12 @@
             </p>
         </div>
       </div>  
+
     <!--Here is the START of the Gallery Grid-->
     <div id="gallery-titel">
       <h2>Portfolio</h2>
     </div>
+
     <!--1 picture in the gallery-->
     <div class="gallery-row">
       <div class="gallery-column">
@@ -75,6 +84,7 @@
           <p>Lorem ipsum..</p>
         </div>
       </div>
+
       <!--2 picture in the gallery-->
       <div class="gallery-column">
         <div class="gallery-content">
@@ -94,6 +104,7 @@
             <p>Lorem ipsum..</p>
           </div>
         </div>
+
         <!--4 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
@@ -103,6 +114,7 @@
             <p>Lorem ipsum..</p>
           </div>
         </div>
+
         <!--5 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
@@ -112,6 +124,7 @@
             <p>Lorem ipsum..</p>
           </div>
         </div>
+
         <!--6 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
@@ -121,6 +134,7 @@
             <p>Lorem ipsum..</p>
           </div>
         </div>
+
         <!--Here is the caption for every picture-->
         <div class="caption-container">
           <p class="caption"></p>
@@ -152,6 +166,7 @@
         <div class="modal-image"> 
           <img src="../media/images/wave.jpg" alt="vulcano-picture">
         </div>
+
         <!--THUMBNAILS-->
         <div class="modal-thumbnails-wrapper">
           <div class="modal-thumbnails">
@@ -178,12 +193,8 @@
         <a class="next" onclick="plusSlide()">&#10095</a>
         <!--Previous Slide-->
         <a class="previous" onclick="minusSlide()">&#10094</a>
+
       </div>
-
-    
-    <!--Here is the END of the gallary-->
-
-    <!--End-Main-->
     </div>
 </body>
 </html>

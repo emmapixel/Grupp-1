@@ -898,13 +898,21 @@ footer h3 {
     right: 10px;
     bottom: 10px;
     z-index: 10;
+    background: #fd6c0f; 
+}
+#email-form-container{
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    position: fixed;
+    right: 38px;
+    bottom: 79px;
+    z-index: 10;
+    font-weight: 600;
     background: #fd6c0f;
 }
-#email-form-container form{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
+
 
 #submit-button{
     width: 50px;

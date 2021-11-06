@@ -471,3 +471,15 @@ function sendMessage(event){
   event.preventDefault();
   return false;
 }
+
+//email-form
+function showEmailForm(){
+  console.log("hej");
+  const emailFormContainerFlip = document.getElementById("email-form-container");
+  console.log(emailFormContainerFlip);
+  if(emailFormContainerFlip.style.display === "block"){
+    emailFormContainerFlip.style.display = "none";
+  }else{
+    emailFormContainerFlip.style.display = "block";
+  }
+}
