@@ -116,3 +116,18 @@ function showSlides() {
     //Add active to the thumbnail's classname
     thumbnails[slideIndex].className += " active";
   }
+
+  let liked = false;
+
+  //This is a function that change the heart icon to colored heart.
+  function changeHeartPicture(){
+    liked = !liked;
+    if(liked){
+      document.getElementById("heart-button-white").style.display ="block";
+      document.getElementById("heart-button").style.display = "none";
+    }else{
+      alert("Stop disliking my pictures!!!")
+      document.getElementById("heart-button-white").style.display = "none";
+      document.getElementById("heart-button").style.display ="block";
+    }
+  };

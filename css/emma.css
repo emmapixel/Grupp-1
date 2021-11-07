@@ -264,11 +264,8 @@ a:active {
   cursor: pointer;
 }
 
-.heart-button-black{
+#heart-button-white{
   display:none;
-}
-
-.heart-button{
   width: 50px;
   height: 50px;
   position: absolute;
@@ -280,8 +277,22 @@ a:active {
   border-radius: 50%;
   padding-top: 5px;
 }
-.heart-button:focus,
-.heart-button:hover{
+
+#heart-button{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  padding-top: 5px;
+}
+#heart-button:focus,
+#heart-button:hover{
   cursor: pointer;
 }
 

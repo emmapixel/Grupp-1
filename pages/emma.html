@@ -163,8 +163,9 @@
     <!--Here is the START of the gallery Modal-->
     <div id="modal-container" class="modal">
       <div class="modal-content">
-        <button class="heart-button" onclick="triggerSound()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-        <button class="heart-button-black" onclick="triggerSound()"><i class="fa fa-heart" aria-hidden="true"></i></button>
+        <!--Here is a heart button with two functions that will be triggered when clicking on the buttons.-->
+        <button id="heart-button" onclick="changeHeartPicture()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        <button id="heart-button-white" onclick="changeHeartPicture()"><i class="fa fa-heart" aria-hidden="true"></i></button>
 
         <!--When you click on the x-button the closeModal() function triggers-->
         <button class="x-button" onclick="closeModal()">X</button>
