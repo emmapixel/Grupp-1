@@ -418,9 +418,6 @@ the thumbnail wrapper using the inneHTML. I also give the thumbnail pictures an 
 something will happen(see the function setMainImageMary)  `./maryspics/${marysImages[0].name}`*/
 
 window.addEventListener("load", () => {
-  document
-    .getElementById("main-image-mary-lightbox")
-    .setAttribute("src", `./maryspics/${marysImages[0].name}`);
   document.getElementById("thumbnail-wrapper").innerHTML = marysImages
     .map(
       (img) =>
@@ -488,6 +485,9 @@ const allPictures = document.querySelectorAll(".mary-pic");
 allPictures.forEach((pic) =>
   pic.addEventListener("click", () => {
     document.getElementById("marys-lightbox-wrapper").style.display = "flex";
+    document.getElementById("main-image-mary-lightbox").setAttribute("src", pic.src);
+    setActiveThumbnailMary();
+
   })
 );
 
@@ -498,6 +498,9 @@ const setMainImageMary = (src) => {
   document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
   setActiveThumbnailMary();
 };
+
+
+
 function sendMessage(event){
   const form = event.target;
   const firstnameInput = form.elements['fname'];
