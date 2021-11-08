@@ -12,17 +12,21 @@
 </head>
 <body>
     <!-- START-MAIN -->
-    <!--Home button-->
+    <!--Home-button-->
     <button id="home-button"><a href="../index.html"> Home </a></button>
 
+    <!--Card-container starts here-->
     <div class="card-container">
       <div id="card-image-text-wrapper">
+          <!--Here is the first picture slide on the card-->
           <div class="card-image">
               <img class="card-images" id="natural-disaster-picture" src="../media/images/fire.jpg" alt="Picture of fire" width="100%" height="100%">
+              <!--Here is a card info icon that has a onclick event to open info-modal-->
               <div class="card-info" id="card-info-id" onclick="openInfoModal()">
                 <i class="fa fa-info" aria-hidden="true"></i>
               </div>
           </div>
+            <!--This card-text contains a picture of Mia and some information text about her with a scrollbar-->
             <div class="card-text">
                 <h2>Mia Photoson</h2>
                 <img src="../media/images/photographer-female-2.jpg" alt="Mia-Photographer" width="300px">
@@ -51,15 +55,7 @@
         </div>
       </div>
 
-      <!--Here is the previous button and next button-->
-      <div class="previous-next-buttons">
-        <button onclick="previousPicture()"><i class="fa fa-chevron-left"></i> Previous </button>
-        <button onclick="nextPicture()"> Next <i class="fa fa-chevron-right"></i></button>
-        <button><a href="../index.html#contact-section"> Contact </a></button>
-        <button><a href="#gallery-titel"> Portfolio </a></button>
-      </div>
-
-      <!--Business card modal-->
+      <!--info-modal-->
       <div id="info-modal">
         <div class="info-content">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate iste,
@@ -68,6 +64,22 @@
             </p>
         </div>
       </div>  
+
+      <!--Here are the previous and next buttons-->
+      <div class="button-wrapper">
+        <div class="previous-next-buttons">
+            <!--Onclick event that triggers the previousPicture() function-->
+            <button onclick="previousPicture()"><i class="fa fa-chevron-left"></i> Previous </button>
+            <!--Onclick event that triggers the nextPicture() function-->
+            <button onclick="nextPicture()"> Next <i class="fa fa-chevron-right"></i></button>
+        </div>
+
+        <!--Here are the contact and portfolio buttons-->
+        <div class="contact-portfolio-buttons">
+          <button><a href="../index.html#contact-section"> Contact </a></button>
+          <button><a href="#gallery-titel"> Portfolio </a></button>
+        </div>
+      </div>
 
     <!--Here is the START of the Gallery Grid-->
     <div id="gallery-titel">
@@ -78,8 +90,9 @@
     <div class="gallery-row">
       <div class="gallery-column">
         <div class="gallery-content">
+          <!--When you click the image the openModal() function and currentSlide(1) function triggers-->
           <img src="../media/images/tornado.jpg" alt="A picture of lightning" style="width:100%" 
-          onclick="openModal();currentSlide(1)">
+          onclick="openModal();currentSlide(0)">
           <h3>My Work</h3>
           <p>Lorem ipsum..</p>
         </div>
@@ -88,8 +101,9 @@
       <!--2 picture in the gallery-->
       <div class="gallery-column">
         <div class="gallery-content">
+          <!--When you click the image the openModal() function and currentSlide(2) function triggers-->
           <img src="../media/images/lightning.jpg" alt="A picture of vulcano" style="width:100%"
-          onclick="openModal();currentSlide(2)">
+          onclick="openModal();currentSlide(1)">
           <h3>My Work</h3>
           <p>Lorem ipsum..</p>
         </div>
@@ -98,8 +112,9 @@
         <!--3 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
+            <!--When you click the image the openModal() function and currentSlide(3) function triggers-->
             <img src="../media/images/vulcano.jpg" alt="A picture of vulcano" style="width:100%"
-            onclick="openModal();currentSlide(3)">
+            onclick="openModal();currentSlide(2)">
             <h3>My Work</h3>
             <p>Lorem ipsum..</p>
           </div>
@@ -108,8 +123,9 @@
         <!--4 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
+            <!--When you click the image the openModal() function and currentSlide(4) function triggers-->
             <img src="../media/images/fire.jpg" alt="A picture of vulcano" style="width:100%"
-            onclick="openModal();currentSlide(4)">
+            onclick="openModal();currentSlide(3)">
             <h3>My Work</h3>
             <p>Lorem ipsum..</p>
           </div>
@@ -118,8 +134,9 @@
         <!--5 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
+            <!--When you click the image the openModal() function and currentSlide(5) function triggers-->
             <img src="../media/images/tsunami.jpg" alt="A picture of vulcano" style="width:100%"
-            onclick="openModal();currentSlide(5)">
+            onclick="openModal();currentSlide(4)">
             <h3>My Work</h3>
             <p>Lorem ipsum..</p>
           </div>
@@ -128,8 +145,9 @@
         <!--6 picture in the gallery-->
         <div class="gallery-column">
           <div class="gallery-content">
+            <!--When you click the image the openModal() function and currentSlide(6) function triggers-->
             <img src="../media/images/wave.jpg" alt="A picture of vulcano" style="width:100%"
-            onclick="openModal();currentSlide(6)">
+            onclick="openModal();currentSlide(5)">
             <h3>My Work</h3>
             <p>Lorem ipsum..</p>
           </div>
@@ -142,11 +160,14 @@
       </div>
     </div>
 
-    <!--Here is the START of the Modal-->
+    <!--Here is the START of the gallery Modal-->
     <div id="modal-container" class="modal">
       <div class="modal-content">
-        <button class="heart-button" onclick="triggerSound()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-        <button class="heart-button-black" onclick="triggerSound()"><i class="fa fa-heart" aria-hidden="true"></i></button>
+        <!--Here is a heart button with two functions that will be triggered when clicking on the buttons.-->
+        <button id="heart-button" onclick="changeHeartPicture()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        <button id="heart-button-white" onclick="changeHeartPicture()"><i class="fa fa-heart" aria-hidden="true"></i></button>
+
+        <!--When you click on the x-button the closeModal() function triggers-->
         <button class="x-button" onclick="closeModal()">X</button>
         <div class="modal-image"> 
           <img src="../media/images/tornado.jpg" alt="lightning-picture">
@@ -167,33 +188,33 @@
           <img src="../media/images/wave.jpg" alt="vulcano-picture">
         </div>
 
-        <!--THUMBNAILS-->
+        <!--MODAL-THUMBNAILS-->
         <div class="modal-thumbnails-wrapper">
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/tornado.jpg">
+            <!--The thumbnails have the same functions as the gallery-pictures-->
+            <img class="thumbnail-image" src="../media/images/tornado.jpg" onclick="openModal();currentSlide(0)">
           </div>
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/lightning.jpg">
+            <img class="thumbnail-image" src="../media/images/lightning.jpg" onclick="openModal();currentSlide(1)">
           </div>
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/vulcano.jpg">
+            <img class="thumbnail-image" src="../media/images/vulcano.jpg" onclick="openModal();currentSlide(2)">
           </div>
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/fire.jpg">
+            <img class="thumbnail-image" src="../media/images/fire.jpg" onclick="openModal();currentSlide(3)">
           </div>
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/tsunami.jpg">
+            <img class="thumbnail-image" src="../media/images/tsunami.jpg" onclick="openModal();currentSlide(4)">
           </div>
           <div class="modal-thumbnails">
-            <img class="thumbnail-image" src="../media/images/wave.jpg">
+            <img class="thumbnail-image" src="../media/images/wave.jpg" onclick="openModal();currentSlide(5)">
           </div>
         </div>
 
-        <!--Next Slide-->
+        <!--Next Slide-  onclick the plusSlide() function triggers-->
         <a class="next" onclick="plusSlide()">&#10095</a>
-        <!--Previous Slide-->
+        <!--Previous Slide- onclick the plusSlide() function triggers-->
         <a class="previous" onclick="minusSlide()">&#10094</a>
-
       </div>
     </div>
 </body>

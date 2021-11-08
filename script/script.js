@@ -239,7 +239,7 @@ function modalPortfolio() {
   } else if (maryImage.style.display === "flex") {
     maryPortfolioModal.style.display = "grid";
   } else {
-    miaPortfolioModal.style.display = "grid";
+    document.location = "../pages/emma.html";
   }
 }
 /*------------------*/
@@ -499,31 +499,39 @@ const setMainImageMary = (src) => {
   setActiveThumbnailMary();
 };
 
-
-
 function sendMessage(event){
+  //We start by grabbing the target of the event, in our case the contact form
   const form = event.target;
+  //Among the form elements, we grab the input element with id fname
   const firstnameInput = form.elements['fname'];
+  //We save the firstname to a constant
   const firstname = firstnameInput.value;
 
+  //We do the same for lastname and message
   const lastnameInput = form.elements['lname'];
   const lastname = lastnameInput.value;
-
-  const emailInput = form.elements['email'];
-  const email = emailInput.value;
-
   const messageTextarea = form.elements['messageTextareaId'];
   const message = messageTextarea.value;
-  console.log(firstname + " " + lastname + " " + email + " " + message);
+
+  //Show the mail window with prefilled information about the
+  //receiver, subject and mail body
+  document.location.href = "mailto:exempel@mail.com?subject="
+        + encodeURIComponent("Meddelande från " + firstname + " " + lastname)
+        + "&body=" + encodeURIComponent(message);
+  
+  //Clear all the fields in the form
+  firstnameInput.value = "";
+  lastnameInput.value = "";
+  messageTextarea.value = "";
+  
+  //Prevent the browser from doing anything with the event
   event.preventDefault();
   return false;
 }
 
 //email-form
 function showEmailForm(){
-  console.log("hej");
   const emailFormContainerFlip = document.getElementById("email-form-container");
-  console.log(emailFormContainerFlip);
   if(emailFormContainerFlip.style.display === "block"){
     emailFormContainerFlip.style.display = "none";
   }else{

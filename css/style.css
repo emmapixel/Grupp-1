@@ -901,6 +901,7 @@ footer h3 {
 }
 #email-form-container{
     display: none;
+    padding-left: 12px;
     flex-direction: column;
     width: 200px;
     height: 300px;
