@@ -384,25 +384,8 @@ function onSubmit() {
 /*---------------------*/
 /*-----MODAL ENDS---- */
 
-/* const openLightboxMary = () => {
-  const marysPictures = document.getElementsByClassName("mary-pic");
-  for (let i = 0; i < marysPictures.length; i++) {
-    marysPictures[i].addEventListener("click", () => {
-      document.getElementById("marys-lightbox-wrapper").style.display = "flex";
-    });
-  }
-  window.addEventListener("load", openLightboxMary);
-};*/
-
-/*The function closeMarysLightbox is used for closing the lightbox when clicked on a span in HTML
-When the span (X) is clicked the lightbox will not be displayed */
-const closeMarysLightbox = () => {
-  document.getElementById("marys-lightbox-wrapper").style.display = "none";
-};
-/* The code below is so that the function openLightboxMary is called when the page has loaded */
-
+// Ghazals js
 /* This is an array with the pictures that will be displayed in the thumbnail wrapper and the main-image*/
-
 const marysImages = [
   { name: "nature1.jpg" },
   { name: "nature2.jpg" },
@@ -411,29 +394,33 @@ const marysImages = [
   { name: "nature5.jpg" },
   { name: "nature6.jpg" },
 ];
+
+/*The function closeMarysLightbox is used for closing the lightbox when clicked on a span in HTML
+ */
+const closeMarysLightbox = () => {
+  document.getElementById("marys-lightbox-wrapper").style.display = "none";
+};
+
 /* The eventlistner is added so that when the page loads the pictures will be 
 displayed as thumbnails in the thumbnail wrapper.
-First I set the main-image to the first pic in the array that has the index of [0], I use the setAttribute for
-the src and path of the picture, then with the help of a .map() I create a new array and push all the picture to 
-the thumbnail wrapper using the inneHTML. I also give the thumbnail pictures an onclickevent so that when clicked
-something will happen(see the function setMainImageMary)  `./maryspics/${marysImages[0].name}`*/
-
+*/
 window.addEventListener("load", () => {
   document.getElementById("thumbnail-wrapper").innerHTML = marysImages
     .map(
       (img) =>
         `<img src="./maryspics/${img.name}" class="thumbnail-mary" onclick="setMainImageMary(this.src)">`
-    )
-    .join("");
+    ) // the .map() creates an empty array for the pictures.
+    .join(""); //to "join" the pics without the ","
   setActiveThumbnailMary();
   document
     .getElementById("prev-btn-mary")
-    .addEventListener("click", prevImageMary);
+    .addEventListener("click", prevImageMary); // added a function to the previous button
   document
     .getElementById("next-btn-mary")
-    .addEventListener("click", nextImageMary);
+    .addEventListener("click", nextImageMary); // added a function to the next button
 });
-
+/* This function loops through all the thumbnails and if the source of the thumbnail and the main image is the same
+when clicked it removes 1 fron the index which results in the main picture being chenged to the picture with the 1 lower index.*/
 const prevImageMary = () => {
   const marysThumbs = document.getElementsByClassName("thumbnail-mary");
   for (let i = 0; i < marysThumbs.length; i++) {
@@ -445,10 +432,18 @@ const prevImageMary = () => {
       document
         .getElementById("main-image-mary-lightbox")
         .setAttribute("src", marysThumbs[(i -= 1)].src);
-    }
+    } else if (marysThumbs[i].src === document
+      .getElementById("main-image-mary-lightbox").src && i === 0){
+        document
+        .getElementById("main-image-mary-lightbox")
+        .setAttribute("src", marysThumbs[(i += marysThumbs.length - 1)].src); 
+      } // else if is to jump to the last pic if clicked while being on the first pic
     setActiveThumbnailMary();
   }
 };
+/* This function does the same thing as the function before but this time it adds 1 to the index and it reesults 
+in the next picture in the array being displayed as the main image
+ */
 const nextImageMary = () => {
   const marysThumbs = document.getElementsByClassName("thumbnail-mary");
   for (let i = 0; i < marysThumbs.length; i++) {
@@ -460,11 +455,16 @@ const nextImageMary = () => {
       document
         .getElementById("main-image-mary-lightbox")
         .setAttribute("src", marysThumbs[(i += 1)].src);
-    }
+    } else if (marysThumbs[i].src === document
+      .getElementById("main-image-mary-lightbox").src && i === marysThumbs.length - 1) {
+      document
+        .getElementById("main-image-mary-lightbox")
+        .setAttribute("src", marysThumbs[0].src);
+    } // else if is for the loop to go back to pic 1 index[0] and start over again
     setActiveThumbnailMary();
   }
 };
-
+/* If the thumbnail and the main image have the same source, the thumbnail will have a border*/
 const setActiveThumbnailMary = () => {
   const marysThumbs = document.getElementsByClassName("thumbnail-mary");
   for (let s = 0; s < marysThumbs.length; s++) {
@@ -493,11 +493,11 @@ allPictures.forEach((pic) =>
   })
 );
 
-/* When clicked this function will set the  same src for the main image and the thumbnail thats is being clicked
+/* When clicked this function will set the same src for the main image and the thumbnail thats is being clicked
 on. When you click a thumbnail that picture will be displayed as the main image
   */
 const setMainImageMary = (src) => {
-  document.getElementById("main-image-mary-lightbox").setAttribute("src", src);
+  document.getElementById("main-image-mary-lightbox").setAttribute("src", src); // the src follows from the onclick="setMainImageMary(this.src)
   setActiveThumbnailMary();
 };
 
