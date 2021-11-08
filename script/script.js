@@ -237,7 +237,7 @@ function modalPortfolio() {
   if (chrisImage.style.display === "flex") {
     chrisPortfolioModal.style.display = "grid";
   } else if (maryImage.style.display === "flex") {
-    maryPortfolioModal.style.display = "grid";
+    maryPortfolioModal.style.display = "flex";
   } else {
     document.location = "../pages/emma.html";
   }
