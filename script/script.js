@@ -93,6 +93,7 @@ function chrisP() {
 function maryP() {
   //Shows Mary Photossons "profile" in the "about us"-modal, and writes out her information.
   for (let i = 0; i < persons.length; i++) {
+    document;
     if (persons[i].fName === "Mary") {
       maryImage.style.display = "flex";
       maryInfo.style.display = "block";
@@ -237,7 +238,7 @@ function modalPortfolio() {
   if (chrisImage.style.display === "flex") {
     chrisPortfolioModal.style.display = "grid";
   } else if (maryImage.style.display === "flex") {
-    maryPortfolioModal.style.display = "grid";
+    maryPortfolioModal.style.display = "flex";
   } else {
     document.location = "../pages/emma.html";
   }
@@ -485,9 +486,10 @@ const allPictures = document.querySelectorAll(".mary-pic");
 allPictures.forEach((pic) =>
   pic.addEventListener("click", () => {
     document.getElementById("marys-lightbox-wrapper").style.display = "flex";
-    document.getElementById("main-image-mary-lightbox").setAttribute("src", pic.src);
+    document
+      .getElementById("main-image-mary-lightbox")
+      .setAttribute("src", pic.src);
     setActiveThumbnailMary();
-
   })
 );
 
@@ -499,42 +501,46 @@ const setMainImageMary = (src) => {
   setActiveThumbnailMary();
 };
 
-function sendMessage(event){
+function sendMessage(event) {
   //We start by grabbing the target of the event, in our case the contact form
   const form = event.target;
   //Among the form elements, we grab the input element with id fname
-  const firstnameInput = form.elements['fname'];
+  const firstnameInput = form.elements["fname"];
   //We save the firstname to a constant
   const firstname = firstnameInput.value;
 
   //We do the same for lastname and message
-  const lastnameInput = form.elements['lname'];
+  const lastnameInput = form.elements["lname"];
   const lastname = lastnameInput.value;
-  const messageTextarea = form.elements['messageTextareaId'];
+  const messageTextarea = form.elements["messageTextareaId"];
   const message = messageTextarea.value;
 
   //Show the mail window with prefilled information about the
   //receiver, subject and mail body
-  document.location.href = "mailto:exempel@mail.com?subject="
-        + encodeURIComponent("Meddelande från " + firstname + " " + lastname)
-        + "&body=" + encodeURIComponent(message);
-  
+  document.location.href =
+    "mailto:exempel@mail.com?subject=" +
+    encodeURIComponent("Meddelande från " + firstname + " " + lastname) +
+    "&body=" +
+    encodeURIComponent(message);
+
   //Clear all the fields in the form
   firstnameInput.value = "";
   lastnameInput.value = "";
   messageTextarea.value = "";
-  
+
   //Prevent the browser from doing anything with the event
   event.preventDefault();
   return false;
 }
 
 //email-form
-function showEmailForm(){
-  const emailFormContainerFlip = document.getElementById("email-form-container");
-  if(emailFormContainerFlip.style.display === "block"){
+function showEmailForm() {
+  const emailFormContainerFlip = document.getElementById(
+    "email-form-container"
+  );
+  if (emailFormContainerFlip.style.display === "block") {
     emailFormContainerFlip.style.display = "none";
-  }else{
+  } else {
     emailFormContainerFlip.style.display = "block";
   }
 }
