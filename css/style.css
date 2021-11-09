@@ -94,6 +94,39 @@
   transform: rotate(-2deg);
 }
 
+/*HOME SECTION - MEDIA QUERY*/
+@media screen and (max-width: 800px){
+  .home-text-container{
+    display: block;
+    width: 100%;
+  }
+  .home-text-container nav{
+    display: none;
+  }
+  .home-text-container h1 {
+    font-size: 35px;
+    margin-top: 40px;
+  }
+  .home-text-container h2 {
+    font-size: 25px;
+    margin-left: 40px;
+  }
+  .home-text-container h3{
+    display: none;
+  }
+  .home-photo-1 img{
+    width: 80%;
+    height: 50%;
+    top: 20%;
+    right: 5%;
+  }
+  .home-photo-2 img{
+    width: 70%;
+    height: 40%;
+    left: 5%;
+    top: 55%;
+  }
+}
 /*ABOUT SECTION*/
 #about-section {
   width: 100%;
@@ -183,11 +216,22 @@
   margin-top: 270px;
   transition: 0.5s;
 }
-
+/* ABOUT US - MEDIA QUERY */
+@media screen and (max-width: 800px){
+  #about-section{
+    height: 280vh;
+  }
+  .card-container{
+    display: block;
+  }
+  .card-container .card{
+    margin: 60px 70px;
+  }
+}
 /* PORTFOLIO SECTION */
 #gallery-section {
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -199,6 +243,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 .gallery-item-1 {
   grid-column-start: 1;
@@ -511,6 +556,43 @@ footer h3 {
   cursor: pointer;
   font-size: 50px;
 }
+/* MODAL - MEDIA QUERY*/
+@media screen and (max-width: 800px){ 
+  .exit-icon i, .back-icon i{
+    font-size: 40px;
+  }
+  .right-icon{
+    right: 3%;
+  }
+  .right-icon i{
+    font-size: 35px;
+  }
+  .left-icon{
+    left: 3%;
+  }
+  .left-icon i{
+    font-size: 35px;
+  }
+  .modal-read-more{
+    display: block;
+    height: 80vh;
+    top: 9.5%
+  }
+  .modal-image{
+    width: 100%;
+  }
+  .modal-text{
+    width: 100%;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .chris-modal-info .chris-name b{
+    font-size: 25px;
+  }
+  .chris-modal-info .chris-type b{
+    font-size: 20px;
+  }
+}
 /* MODAL - CONTACT */
 .modal-contact {
   display: none;
@@ -525,7 +607,6 @@ footer h3 {
   border-radius: 5px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-
 .modal-contact-text {
   width: 100%;
   height: 40%;
@@ -716,7 +797,8 @@ footer h3 {
   grid-row-start: 5;
   grid-row-end: 6;
 }
-#gallery-modal {
+#gallery-modal,
+#homescreen-gallery-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -726,7 +808,8 @@ footer h3 {
   z-index: 6;
   display: none;
 }
-.main-image-wrapper {
+.main-image-wrapper,
+.homescreen-main-image-wrapper {
   position: relative;
   top: 5%;
   left: 20%;
@@ -734,12 +817,14 @@ footer h3 {
   height: 65vh;
   background-color: white;
 }
-#main-image {
+#main-image,
+#homescreen-main-image {
   width: 100%;
   height: 65vh;
   object-fit: cover;
 }
-#exit-gallery-button {
+#exit-gallery-button,
+#homescreen-exit-gallery-button {
   position: absolute;
   top: 3%;
   right: 3%;
@@ -748,7 +833,9 @@ footer h3 {
   color: white;
 }
 #prev-button,
-#next-button {
+#homescreen-prev-button,
+#next-button,
+#homescreen-next-button {
   position: absolute;
   top: 35%;
   color: white;
@@ -758,19 +845,24 @@ footer h3 {
   transition: 0.3s;
   z-index: 4;
 }
-#prev-button {
+#prev-button,
+#homescreen-prev-button {
   left: 15%;
 }
-#prev-button:hover {
+#prev-button:hover,
+#homescreen-prev-button:hover {
   margin-left: -3px;
 }
-#next-button {
+#next-button,
+#homescreen-next-button {
   right: 15%;
 }
-#next-button:hover {
+#next-button:hover,
+#homescreen-next-button:hover {
   margin-right: -3px;
 }
-#thumbnails-wrapper {
+#thumbnails-wrapper,
+#homescreen-thumbnails-wrapper {
   width: 80%;
   height: 130px;
   position: absolute;
@@ -781,7 +873,8 @@ footer h3 {
   overflow: hidden;
   padding: 0 30px;
 }
-.thumbnail {
+.thumbnail,
+.homescreen-thumbnail {
   width: 120px;
   height: 85px;
   object-fit: cover;
@@ -912,8 +1005,11 @@ footer h3 {
     font-weight: 600;
     background: #fd6c0f;
 }
-
-
 #submit-button{
     width: 50px;
+}
+@media screen and (max-width: 800px){
+  #email-icon{
+    display: none;
+  }
 }

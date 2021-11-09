@@ -105,86 +105,86 @@
             <figure class="gallery-item gallery-item-1">
                 <img
                     src="media/images/city/neon-sign.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-2">
                 <img
                     src="media/images/city/neon-sign-3.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-3">
                 <img
                     src="media/images/city/neon-street.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
 
             <figure class="gallery-item gallery-item-4">
                 <img
                     src="media/images/city/cab-city.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-5">
                 <img
                     src="media/images/city/bike-city.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-6">
                 <img
                     src="media/images/city/shop-city.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-7">
                 <img
                     src="media/images/city/umbrella.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-8">
                 <img
                     src="media/images/city/alleyway.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-9">
                 <img
                     src="media/images/city/hongkong.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-10">
                 <img
                     src="media/images/city/skyscraper.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-11">
                 <img
                     src="media/images/city/portrait.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-12">
                 <img
                     src="media/images/city/door.jpg"
-                    alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
             <figure class="gallery-item gallery-item-13">
@@ -192,10 +192,20 @@
                     src="media/images/city/cone.jpg"
                     alt=""
                     class="gallery-image"
+                    onclick="setHomescreenMainImage(src)"
                 />
             </figure>
         </section>
-
+        <div id="homescreen-gallery-modal">
+            <div class="homescreen-main-image-wrapper">
+                <img src="" id="homescreen-main-image">
+            </div>
+            <span id="homescreen-exit-gallery-button" onclick="exitHomescreenGalleryModal()"><i class="fas fa-times"></i></span>
+            <span id="homescreen-prev-button"><i class="fas fa-angle-left"></i></span>
+            <span id="homescreen-next-button"><i class="fas fa-angle-right"></i></span>
+            <div id="homescreen-thumbnails-wrapper">
+            </div>
+        </div>
         <!-- CONTACT SECTION -->
         <!-- A google map for customers to find us or our store -->
         <iframe
@@ -286,8 +296,9 @@
                 <div class="modal-contact-mail">
                     <form onsubmit="onSubmit(); return false;">
                         <input id="email-input" type="email" placeholder="Email" required />
-                        <input type="text" placeholder="Subject" required />
+                        <input id="subject-input" type="text" placeholder="Subject" required />
                         <textarea
+                            id="message-input"
                             placeholder="Write your message here!"
                             required
                         ></textarea>

@@ -1,3 +1,120 @@
+/* HOMESCREEN - GALLERY */
+
+const galleryImages = [
+  { name: "alleyway.jpg" },
+  { name: "bike-city.jpg" },
+  { name: "cab-city.jpg" },
+  { name: "cone.jpg" },
+  { name: "door.jpg" },
+  { name: "girl-glasses.jpg" },
+  { name: "hongkong.jpg" },
+  { name: "neon-sign-2.jpg" },
+  { name: "neon-sign-3.jpg" },
+  { name: "neon-sign.jpg" },
+  { name: "neon-street.jpg" },
+  { name: "portrait.jpg" },
+  { name: "shop-city.jpg" },
+  { name: "skyscraper.jpg" },
+  { name: "umbrella.jpg" }
+];
+
+const homescreenGallerySection = document.getElementById("gallery-section")
+const homescreenGalleryModal = document.getElementById("homescreen-gallery-modal");
+const galleryMainImage = document.getElementById("homescreen-main-image");
+const galleryThumbnails = document.getElementsByClassName("homescreen-thumbnail");
+const galleryThumbnailsWrapper = document.getElementById("homescreen-thumbnails-wrapper");
+const galleryPrevButton = document.getElementById("homescreen-prev-button");
+const galleryNextButton = document.getElementById("homescreen-next-button");
+
+function setHomescreenMainImage(src) {
+  //When you click on a image in the gallery, this function will make that image as the "main image".
+  document.body.style.overflow = "hidden";
+  homescreenGallerySection.style.filter = "blur(5px)";
+  homescreenGalleryModal.style.display = "flex";
+  galleryMainImage.setAttribute("src", src);
+  setHomescreenActiveThumbnail();
+  thumbnailScroller();
+  document.getElementById("gallery-section").scrollIntoView();
+}
+
+function setHomescreenActiveThumbnail() {
+  //This function will make a red border and scale up the thumbnail of the image that shows as "main image".
+  for (let i = 0; i < galleryThumbnails.length; i++) {
+    if (galleryThumbnails[i].src === galleryMainImage.src) {
+      galleryThumbnails[i].style.border = "2px solid white";
+      galleryThumbnails[i].style.transform = "scale(1.25)";
+      galleryThumbnails[i].style.boxShadow = "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)";
+    }else{
+      galleryThumbnails[i].style.border = "none";
+      galleryThumbnails[i].style.transform = "none";
+    }
+  }
+}
+  
+function thumbnailScroller(){
+  //This function will scroll in the thumbnail slider depending on which image you click on.
+  for (let j = 0; j < galleryThumbnails.length; j++){
+    if(galleryThumbnails[j].src === galleryMainImage.src && j <= 7){
+      galleryThumbnailsWrapper.scrollLeft -= 500;
+    }else if(galleryThumbnails[j].src === galleryMainImage.src && j >= 7){
+      galleryThumbnailsWrapper.scrollLeft += 500;
+    }
+  }
+}
+
+function exitHomescreenGalleryModal() {
+  //Will exit the gallery modal.
+  homescreenGalleryModal.style.display = "none";
+  homescreenGallerySection.style.filter = "none";
+  document.body.style.overflow = "auto";
+}
+
+function prevHomescreenImage() {
+  //Will change "main image" to the previous image in the thumbnail list.
+  for (let i = 0; i < galleryThumbnails.length; i++) {
+    if (galleryThumbnails[i].src === galleryMainImage.src && i !== 0) {
+      galleryMainImage.setAttribute("src", galleryThumbnails[(i -= 1)].src);
+      galleryThumbnailsWrapper.scrollLeft -= 50; //The slider will scroll with to the left.
+      setHomescreenActiveThumbnail();
+    }else if(galleryThumbnails[i].src === galleryMainImage.src && i === 0){
+      galleryMainImage.setAttribute("src", galleryThumbnails[i += galleryThumbnails.length - 1].src);
+      galleryThumbnailsWrapper.scrollLeft += 500; //The slider will scroll all the way to the right.
+      setHomescreenActiveThumbnail();
+    }
+  }
+}
+
+function nextHomescreenImage() {
+  //Will change "main image" to the next image in the thumbnail list.
+  for (let i = 0; i < galleryThumbnails.length; i++) {
+    if (galleryThumbnails[i].src === galleryMainImage.src && i !== galleryThumbnails.length - 1) {
+      galleryMainImage.setAttribute("src", galleryThumbnails[(i += 1)].src);
+      galleryThumbnailsWrapper.scrollLeft += 50; //The slider will scroll to the right.
+      setHomescreenActiveThumbnail();
+    }else if(galleryThumbnails[i].src === galleryMainImage.src && i === galleryThumbnails.length - 1){
+      galleryMainImage.setAttribute("src", galleryThumbnails[0].src);
+      galleryThumbnailsWrapper.scrollLeft -= 500; //The slider will scroll all the way to the right.
+      setHomescreenActiveThumbnail();
+    }
+  }
+}
+
+window.addEventListener("load", function () {
+  //Loads the images before it shows on your screen.
+  galleryMainImage.setAttribute("src", `/media/images/city/${images[0].name}`);
+  galleryThumbnailsWrapper.innerHTML = galleryImages
+    .map(
+      (img) =>
+        `<img src="/media/images/city/${img.name}" class="homescreen-thumbnail" onclick="setHomescreenMainImage(this.src)">`
+    )
+    .join("");
+  setHomescreenActiveThumbnail();
+
+  galleryPrevButton.addEventListener("click", prevHomescreenImage);
+  galleryNextButton.addEventListener("click", nextHomescreenImage);
+});
+/*-------------------*/
+
 /*---MODAL - ABOUT US---*/
 
 const modal = document.getElementById("modal");
@@ -75,9 +192,9 @@ function chrisP() {
     if (persons[i].fName === "Chris") {
       chrisImage.style.display = "flex";
       chrisInfo.style.display = "block";
-      chrisInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span>
-    <span style="font-size: 25px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
-    <span style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
+      chrisInfo.innerHTML = `<span class="chris-name" style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span><br>
+    <span class="chris-type" style="font-size: 25px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
+    <span class="chris-info" style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
     Something I enjoy: As you maybe can figure out by looking in my portfolio, I really enjoy a good looking ${persons[0].likes}. <br><br>
     Things I rather avoids: Im a latenight person and the majority of my photographs are taken in the night, therefor I avoid ${persons[0].dislikes} as much as I can.</span>`;
       maryImage.style.display = "none";
@@ -220,7 +337,6 @@ function modalLeftClick() {
 /*-----------------------*/
 
 /*MODAL -  PORTFOLIO AND CONTACT*/
-
 /* MODAL - PORTFOLIO */
 function modalPortfolio() {
   //This function will show the portfolio of the different photographers depenting on which modal you're into.
@@ -280,7 +396,7 @@ function setActiveThumbnail() {
   //This function will make a red border and scale up the thumbnail of the picture that shows as "main image".
   for (let i = 0; i < thumbnails.length; i++) {
     if (thumbnails[i].src === mainImage.src) {
-      thumbnails[i].style.border = "2px solid red";
+      thumbnails[i].style.border = "2px solid white";
       thumbnails[i].style.transform = "scale(1.25)";
       thumbnails[i].style.boxShadow =
         "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)";
@@ -306,7 +422,9 @@ function prevImage() {
   for (let i = 0; i < thumbnails.length; i++) {
     if (thumbnails[i].src === mainImage.src && i !== 0) {
       mainImage.setAttribute("src", thumbnails[(i -= 1)].src);
-      thumbnailsWrapper.scrollLeft -= 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
+      setActiveThumbnail();
+    }else if(thumbnails[i].src === mainImage.src && i === 0){
+      mainImage.setAttribute("src", thumbnails[i += thumbnails.length - 1].src);
       setActiveThumbnail();
     }
   }
@@ -315,9 +433,11 @@ function prevImage() {
 function nextImage() {
   //Will change "main image" to the next in the thumbnail list.
   for (let i = 0; i < thumbnails.length; i++) {
-    if (thumbnails[i].src === mainImage.src && i !== 9) {
+    if (thumbnails[i].src === mainImage.src && i !== thumbnails.length - 1) {
       mainImage.setAttribute("src", thumbnails[(i += 1)].src);
-      thumbnailsWrapper.scrollLeft += 50; //GÖR SÅ ATT SLIDERN HITTAR VILKEN BILD SOM VISAS, SÅ ATT DEN RÖDA BORDER INTE ÄR "UTANFÖR" BILD.
+      setActiveThumbnail();
+    }else if(thumbnails[i].src === mainImage.src && i === thumbnails.length - 1){
+      mainImage.setAttribute("src", thumbnails[0].src);
       setActiveThumbnail();
     }
   }
@@ -338,6 +458,7 @@ window.addEventListener("load", function () {
   nextButton.addEventListener("click", nextImage);
 });
 /*-------------------*/
+
 /* MODAL - CONTACT */
 function modalContact() {
   //Will open the "contact" section in the modal.
@@ -369,16 +490,22 @@ function onSubmit() {
   //When submiting your form, a message will show up for three seconds and you will go back to the "main modal".
   const popUpModal = document.getElementsByClassName("contact-modal-submit")[0];
   const emailInput = document.getElementById("email-input");
+  const subjectInput = document.getElementById("subject-input");
+  const messageInput = document.getElementById("message-input");
 
   if (emailInput.value.length >= 1) {
     popUpModal.style.display = "block";
     setTimeout(() => {
       //When pressing the "Submit" button the "Thank you" modal will be shown for 3seconds.
       popUpModal.style.display = "none";
+      emailInput.value = "";
+      subjectInput.value = "";
+      messageInput.value = "";
     }, 3000);
   } else {
     popUpModal.style.display = "none";
   }
+  
 }
 /*---------------------*/
 /*-----MODAL ENDS---- */
@@ -538,3 +665,5 @@ function showEmailForm(){
     emailFormContainerFlip.style.display = "block";
   }
 }
+
+
