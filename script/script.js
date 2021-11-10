@@ -54,9 +54,11 @@ function setHomescreenActiveThumbnail() {
 function thumbnailScroller(){
   //This function will scroll in the thumbnail slider depending on which image you click on.
   for (let j = 0; j < galleryThumbnails.length; j++){
-    if(galleryThumbnails[j].src === galleryMainImage.src && j <= 7){
+    if(galleryThumbnails[j].src === galleryMainImage.src && j <= 7){ 
+    //If the thumbnail and main image are the same, and the image has an index of 7 or lower. The thumbnailslider will scroll all the way to the left.
       galleryThumbnailsWrapper.scrollLeft -= 500;
-    }else if(galleryThumbnails[j].src === galleryMainImage.src && j >= 7){
+    }else if(galleryThumbnails[j].src === galleryMainImage.src && j > 7){ 
+    //Else if the thumbnail and main image are the same, and the image has an index higher than 7. The thumbnailslider will scroll all the way to the right.
       galleryThumbnailsWrapper.scrollLeft += 500;
     }
   }
@@ -73,10 +75,12 @@ function prevHomescreenImage() {
   //Will change "main image" to the previous image in the thumbnail list.
   for (let i = 0; i < galleryThumbnails.length; i++) {
     if (galleryThumbnails[i].src === galleryMainImage.src && i !== 0) {
+    //If the in thumbnail and the main image are the same and the index is not 0, the previous image in the thumbnailslider will be set as the main image. 
       galleryMainImage.setAttribute("src", galleryThumbnails[(i -= 1)].src);
       galleryThumbnailsWrapper.scrollLeft -= 50; //The slider will scroll with to the left.
       setHomescreenActiveThumbnail();
     }else if(galleryThumbnails[i].src === galleryMainImage.src && i === 0){
+    //Else if the in thumbnail and the main image are the same and the index is 0, the slider will jump to the last image in the slider.
       galleryMainImage.setAttribute("src", galleryThumbnails[i += galleryThumbnails.length - 1].src);
       galleryThumbnailsWrapper.scrollLeft += 500; //The slider will scroll all the way to the right.
       setHomescreenActiveThumbnail();
@@ -88,10 +92,12 @@ function nextHomescreenImage() {
   //Will change "main image" to the next image in the thumbnail list.
   for (let i = 0; i < galleryThumbnails.length; i++) {
     if (galleryThumbnails[i].src === galleryMainImage.src && i !== galleryThumbnails.length - 1) {
+    //If the in thumbnail and the main image are the same and the index is not the last in the array, the next image in the thumbnailslider will be set as the main image. 
       galleryMainImage.setAttribute("src", galleryThumbnails[(i += 1)].src);
       galleryThumbnailsWrapper.scrollLeft += 50; //The slider will scroll to the right.
       setHomescreenActiveThumbnail();
     }else if(galleryThumbnails[i].src === galleryMainImage.src && i === galleryThumbnails.length - 1){
+    //Else if the in thumbnail and the main image are the same and the index is the last in the array, the slider will jump to the first image in the slider.
       galleryMainImage.setAttribute("src", galleryThumbnails[0].src);
       galleryThumbnailsWrapper.scrollLeft -= 500; //The slider will scroll all the way to the right.
       setHomescreenActiveThumbnail();
@@ -100,7 +106,7 @@ function nextHomescreenImage() {
 }
 
 window.addEventListener("load", function () {
-  //Loads the images before it shows on your screen.
+  //Loads the images in the array before it shows in a thumbnail list on your screen.
   galleryMainImage.setAttribute("src", `/media/images/city/${images[0].name}`);
   galleryThumbnailsWrapper.innerHTML = galleryImages
     .map(
@@ -118,8 +124,7 @@ window.addEventListener("load", function () {
 /*---MODAL - ABOUT US---*/
 
 const modal = document.getElementById("modal");
-const chrisPortfolioModal =
-  document.getElementsByClassName("chris-portfolio")[0];
+const chrisPortfolioModal = document.getElementsByClassName("chris-portfolio")[0];
 const maryPortfolioModal = document.getElementsByClassName("mary-portfolio")[0];
 const miaPortfolioModal = document.getElementsByClassName("mia-portfolio")[0];
 const contactBackArrow = document.getElementsByClassName("back-icon")[0];
@@ -194,7 +199,7 @@ function chrisP() {
       chrisInfo.style.display = "block";
       chrisInfo.innerHTML = `<span class="chris-name" style="font-size: 40px;"><b>${persons[0].fName} ${persons[0].lName}</b></span><br>
     <span class="chris-type" style="font-size: 25px; margin-left: 30px;"><b>${persons[0].type}</b></span><br><br><br>
-    <span class="chris-info" style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
+    <span style="font-size: 15px;">My age: Im ${persons[0].age} years old. <br><br>
     Something I enjoy: As you maybe can figure out by looking in my portfolio, I really enjoy a good looking ${persons[0].likes}. <br><br>
     Things I rather avoids: Im a latenight person and the majority of my photographs are taken in the night, therefor I avoid ${persons[0].dislikes} as much as I can.</span>`;
       maryImage.style.display = "none";
@@ -214,8 +219,8 @@ function maryP() {
     if (persons[i].fName === "Mary") {
       maryImage.style.display = "flex";
       maryInfo.style.display = "block";
-      maryInfo.innerHTML = `<span style="font-size: 40px; text-align: center;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
-   <span style="font-size: 25px; margin-left: 30px;"> <b>${persons[1].type}</b></span><br><br><br> 
+      maryInfo.innerHTML = `<span class="mary-name" style="font-size: 40px; text-align: center;"><b>${persons[1].fName} ${persons[1].lName}</b></span>
+   <span class="mary-type" style="font-size: 25px; margin-left: 30px;"> <b>${persons[1].type}</b></span><br><br><br> 
     <span style="font-size: 15px;">My age:</b> Im ${persons[1].age} years old. <br><br>
     What do I prefer to do on my freetime? I love being out in the nature, so taking ${persons[1].likes} is something I like to make time for. <br><br>
     What can drive me crazy? Im a meticulous person, and use to say Im allergic to ${persons[1].dislikes}.</span>`;
@@ -235,8 +240,8 @@ function miaP() {
     if (persons[i].fName === "Mia") {
       miaImage.style.display = "flex";
       miaInfo.style.display = "block";
-      miaInfo.innerHTML = `<span style="font-size: 40px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
-        <span style="font-size: 25px; margin-left: 30px;"><b>${persons[2].type}</b></span><br><br><br> 
+      miaInfo.innerHTML = `<span class="mia-name" style="font-size: 40px;"><b>${persons[2].fName} ${persons[2].lName}</b></span>
+        <span class="mia-type" style="font-size: 25px; margin-left: 30px;"><b>${persons[2].type}</b></span><br><br><br> 
         <span style="font-size: 15px;">My age: Im ${persons[2].age} years old. <br><br>
         Do I have any hobbies? I love ${persons[2].likes} in the local lakes around here. <br><br>
         What would I like to live without? I love to swim in cold water, but I can't stand the cold ${persons[2].dislikes}.</span>`;
@@ -351,11 +356,11 @@ function modalPortfolio() {
     document.body.style.overflow = "auto";
     visible = false;
   }
-  if (chrisImage.style.display === "flex") {
+  if (chrisImage.style.display === "flex") { //If Chris image is shown, his portfolio will show up if you click on the button "Portfolio"
     chrisPortfolioModal.style.display = "grid";
-  } else if (maryImage.style.display === "flex") {
+  } else if (maryImage.style.display === "flex") { //If Marys image is shown, her portfolio will show up if you click on the button "Portfolio"
     maryPortfolioModal.style.display = "flex";
-  } else {
+  } else { //If neather of the above, Mias Portfolio will be shown.
     document.location = "../pages/emma.html";
   }
 }
@@ -382,7 +387,7 @@ const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
 
 function setMainImage(src) {
-  //When you click on a picture in the portfolio, this function will make that picture as the "main image".
+  //When you click on a image in the portfolio, this function will set that image as the "main".
   galleryModal.style.display = "flex";
   chrisPortfolio.style.filter = "blur(5px)";
   contactBackArrow.style.display = "none";
@@ -394,7 +399,7 @@ function setMainImage(src) {
 }
 
 function setActiveThumbnail() {
-  //This function will make a red border and scale up the thumbnail of the picture that shows as "main image".
+  //This function will make a white border and scale up the thumbnail of the image that shows as "main"
   for (let i = 0; i < thumbnails.length; i++) {
     if (thumbnails[i].src === mainImage.src) {
       thumbnails[i].style.border = "2px solid white";
@@ -445,7 +450,7 @@ function nextImage() {
 }
 
 window.addEventListener("load", function () {
-  //Loads the images before it shows on your screen.
+//Loads the images in the array before it shows in a thumbnail list on your screen.
   mainImage.setAttribute("src", `/media/images/chris/${images[0].name}`);
   thumbnailsWrapper.innerHTML = images
     .map(
@@ -467,7 +472,7 @@ function modalContact() {
     "modal-contact-header-h1"
   )[0];
   let visible = false;
-  if (visible === false) {
+  if (visible === false) { 
     contactBackArrow.style.display = "block";
     contactModal.style.display = "flex";
     document.body.style.overflow = "hidden";
@@ -478,17 +483,17 @@ function modalContact() {
     document.body.style.overflow = "auto";
     visible = false;
   }
-  if (chrisImage.style.display === "flex") {
+  if (chrisImage.style.display === "flex") { //If Chris image is shown, his contact page will be loaded.
     contactH1.innerHTML = `Contact <br> ${persons[0].fName}`;
-  } else if (maryImage.style.display === "flex") {
+  } else if (maryImage.style.display === "flex") { //If Marys image is shown, her contact page will be loaded.
     contactH1.innerHTML = `Contact <br> ${persons[1].fName}`;
-  } else {
+  } else { //If neather of the above, Mias contact page will be loaded.
     contactH1.innerHTML = `Contact <br> ${persons[2].fName}`;
   }
 }
 
 function onSubmit() {
-  //When submiting your form, a message will show up for three seconds and you will go back to the "main modal".
+  //When submiting your form, a message will show up for three seconds.
   const popUpModal = document.getElementsByClassName("contact-modal-submit")[0];
   const emailInput = document.getElementById("email-input");
   const subjectInput = document.getElementById("subject-input");
@@ -497,7 +502,7 @@ function onSubmit() {
   if (emailInput.value.length >= 1) {
     popUpModal.style.display = "block";
     setTimeout(() => {
-      //When pressing the "Submit" button the "Thank you" modal will be shown for 3seconds.
+      //When pressing the "Submit" button the "Thank you" modal will be shown for 3seconds and reset the form.
       popUpModal.style.display = "none";
       emailInput.value = "";
       subjectInput.value = "";

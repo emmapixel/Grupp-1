@@ -104,11 +104,11 @@
     display: none;
   }
   .home-text-container h1 {
-    font-size: 35px;
+    font-size: 32.5px;
     margin-top: 40px;
   }
   .home-text-container h2 {
-    font-size: 25px;
+    font-size: 22.5px;
     margin-left: 40px;
   }
   .home-text-container h3{
@@ -225,7 +225,7 @@
     display: block;
   }
   .card-container .card{
-    margin: 60px 70px;
+    margin: 60px 0;
   }
 }
 /* PORTFOLIO SECTION */
@@ -323,7 +323,96 @@
   grid-row-start: 3;
   grid-row-end: 5;
 }
-
+/*GALLERY - MEDIA QUERY*/
+@media screen and (max-width: 800px){
+  #gallery-section{
+    height: 155vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(23, 10vw);
+    grid-gap: 5px;
+    padding: 15px;
+  }
+  .gallery-item-1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  .gallery-item-2{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 16;
+    grid-row-end: 21;
+  }
+  .gallery-item-3{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 9;
+  }
+  .gallery-item-4{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 18;
+    grid-row-end: 21;
+  }
+  .gallery-item-5{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 9;
+  }
+  .gallery-item-6{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 15;
+    grid-row-end: 18;
+  }
+  .gallery-item-7{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 12;
+  }
+  .gallery-item-8{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 21;
+    grid-row-end: 24;
+  }
+  .gallery-item-9{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .gallery-item-10{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 10;
+  }
+  .gallery-item-11{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 15;
+  }
+  .gallery-item-12{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 12;
+    grid-row-end: 16;
+  }
+  .gallery-item-13{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 16;
+    grid-row-end: 18;
+  }
+}
 /*CONTACT SECTION*/
 footer {
   width: 100%;
@@ -561,6 +650,12 @@ footer h3 {
   .exit-icon i, .back-icon i{
     font-size: 40px;
   }
+  .exit-icon i{
+    margin-right: 10px;
+  }
+  .back-icon i{
+    margin-left: 10px;
+  }
   .right-icon{
     right: 3%;
   }
@@ -583,14 +678,26 @@ footer h3 {
   }
   .modal-text{
     width: 100%;
-    margin-top: 0;
+    margin-top: -100px;
     padding: 10px;
+    overflow: scroll;
   }
-  .chris-modal-info .chris-name b{
-    font-size: 25px;
+  .chris-modal-info .chris-name b,
+  .mary-modal-info .mary-name b,
+  .mia-modal-info .mia-name b{
+    display: none;
   }
-  .chris-modal-info .chris-type b{
-    font-size: 20px;
+  .chris-modal-info .chris-type b,
+  .mary-modal-info .mary-type b,
+  .mia-modal-info .mia-type b{
+    display: none;
+  }
+  .mary-modal-image,
+  .mia-modal-image{
+    margin-bottom: 55px;
+  }
+  .modal-text-button a{
+    padding: 15px 10px;
   }
 }
 /* MODAL - CONTACT */
@@ -719,6 +826,42 @@ footer h3 {
   color: white;
   text-align: center;
   margin-top: 5px;
+}
+/* MODAL CONTACT - MEDIA QUERYS */
+@media screen and (max-width: 800px){
+  .modal-contact{
+    width: 70%;
+    height: 80vh;
+    top: 9.5%;
+  }
+  .modal-contact-text{
+    height: 25%;
+    margin-top: 10px;
+  }
+  .modal-contact-header-hr{
+    margin-right: 50px;
+  }
+  .modal-contact-icons{
+    flex-direction: column;
+    padding: 0;
+    margin: -20px;
+    margin-top: 10px;
+  }
+  .modal-contact-icons a{
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 87.5px;
+  }
+  .modal-contact-mail{
+    margin: 0;
+  }
+  .modal-contact-mail form textarea{
+    height: 20vh;
+  }
+  .contact-modal-submit{
+    width: 65%;
+    left: 17.5%;
+  }
 }
 /* MODAL PORTFOLIO */
 
@@ -881,6 +1024,99 @@ footer h3 {
   cursor: pointer;
   margin-right: 20px;
 }
+/* GALLERY AND CHRIS PORTFOLIO - MEDIA QUERYS */
+/* CHRIS PORTFOLIO - MEDIA QUERYS*/
+@media screen and (max-width: 800px){
+  .chris-portfolio {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(16, 7.1vw);
+    grid-gap: 5px;
+    z-index: 5;
+  }
+  .chris-portfolio-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+  .chris-portfolio-item-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 13;
+  }
+  .chris-portfolio-item-3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+  .chris-portfolio-item-4 {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 10;
+    grid-row-end: 13;
+  }
+  .chris-portfolio-item-5 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 13;
+    grid-row-end: 17;
+  }
+  .chris-portfolio-item-6 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 13;
+    grid-row-end: 17;
+  }
+  .chris-portfolio-item-7 {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 10;
+  }
+  .chris-portfolio-item-8 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+  .chris-portfolio-item-9 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+}
+/* LIGHTBOX - MEDIA QUERY */
+@media screen and (max-width: 800px){
+  .homescreen-main-image-wrapper,
+  .main-image-wrapper{
+    margin-top: 25%;
+  }
+  .homescreen-thumbnail,
+  .thumbnail{
+    display: none;
+  }
+  #homescreen-exit-gallery-button,
+  #exit-gallery-button{
+    right: 7.5%;
+  }
+  #homescreen-prev-button,
+  #homescreen-next-button,
+  #prev-button,
+  #next-button{
+    top: 45%;
+  }
+  #homescreen-prev-button,
+  #prev-button{
+    left: 5%;
+  }
+  #homescreen-next-button,
+  #next-button{
+    right: 5%;
+  }
+}
 /* MARY PORTFOLIO */
 .mary-portfolio {
   width: 70%;
@@ -1014,7 +1250,6 @@ padding: 3px;
   font-weight: 600;
   background: #fd6c0f;
 }
-<<<<<<< HEAD
 #submit-button{
     width: 50px;
 }
@@ -1022,9 +1257,4 @@ padding: 3px;
   #email-icon{
     display: none;
   }
-=======
-
-#submit-button {
-  width: 50px;
->>>>>>> 49b5dfbc233ffe40a38f60d22c23f0f108e3b538
 }
