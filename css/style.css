@@ -1152,7 +1152,7 @@ padding: 3px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
-  z-index: 1000000;
+  z-index: 100000;
   display: none;
 }
 .marys-picture-modal {
@@ -1196,22 +1196,48 @@ padding: 3px;
 }
 #main-image-mary-lightbox {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   object-fit: contain;
   padding: 10px;
 }
 
 #thumbnail-wrapper {
   width: 100%;
-  height: 2ovh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: auto;
+  
 }
 .thumbnail-mary {
   width: 50px;
   height: 50px;
 }
+@media only screen and (max-width: 700px){
+  .upper-row{
+    display: flex;
+    flex-direction: column;
+  }
+  .lower-row{
+    display: flex;
+    flex-direction: column;
+  }
+  .piiiics{
+    display: flex;
+    background-color: white;
+  }
+  #marys-lightbox-wrapper{
+    width: 100%;
+  }
+  footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+}
+
 
 /* MIA PORTFOLIO */
 .mia-portfolio {
@@ -1250,6 +1276,7 @@ padding: 3px;
   font-weight: 600;
   background: #fd6c0f;
 }
+<<<<<<< HEAD
 #submit-button{
     width: 50px;
 }
@@ -1257,4 +1284,9 @@ padding: 3px;
   #email-icon{
     display: none;
   }
+=======
+
+#submit-button {
+  width: 50px;
+>>>>>>> 2ccac13272d51c2297f677946a90c70768e78538
 }
